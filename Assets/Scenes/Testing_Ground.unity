@@ -618,17 +618,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3942277511851000615, guid: 8914817e7dc66bf4c8f6d3fbf7dad0b2, type: 3}
-      propertyPath: m_rayLength
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5321338691685973609, guid: 8914817e7dc66bf4c8f6d3fbf7dad0b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5321338691685973609, guid: 8914817e7dc66bf4c8f6d3fbf7dad0b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.978
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5321338691685973609, guid: 8914817e7dc66bf4c8f6d3fbf7dad0b2, type: 3}
       propertyPath: m_LocalPosition.z

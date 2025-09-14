@@ -2,22 +2,32 @@ using System;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class P_Interaction : MonoBehaviour
+public class P_Interaction : PlayerCharacter
 {
-    private InputSystem_Actions m_inputActions;
 
     private Ray m_ray;
-    private GameObject m_hitObject;
+    private GameObject m_hitInteractableGO;
+    private Interactable m_hitInteractable;
 
     [SerializeField] private float m_rayLength = 3f;
 
     public Action<RaycastHit> ObjectDetected;
 
-    private void Awake()
+    protected override void Awake()
     {
-        m_inputActions = new InputSystem_Actions();
-        m_inputActions.Enable();
+        base.Awake();
+
+        m_inputActions.Player.Interact.started += OnInteract;
+    }
+
+    private void OnInteract(InputAction.CallbackContext context)
+    {
+        if(m_hitInteractableGO != null)
+        {
+            m_hitInteractable.OnHit();
+        }
     }
 
     private void Update()
@@ -33,9 +43,10 @@ public class P_Interaction : MonoBehaviour
         {
             EnableDebugMode(m_ray);
 
-            if (hitInfo.collider.TryGetComponent(out Interactable interactable) && hitInfo.collider.gameObject != m_hitObject)
+            if (hitInfo.collider.TryGetComponent(out Interactable interactable) && hitInfo.collider.gameObject != m_hitInteractableGO)
             {
-                m_hitObject = hitInfo.collider.gameObject;
+                m_hitInteractableGO = hitInfo.collider.gameObject;
+                m_hitInteractable = interactable;
                 //invoke script 
                 interactable.OnTargeted();
                 //ObjectDetected.Invoke(hitInfo);
@@ -43,9 +54,11 @@ public class P_Interaction : MonoBehaviour
         }
         else
         {
-            if(m_hitObject != null)
+            if(m_hitInteractableGO != null)
             {
-                m_hitObject = null;
+                m_hitInteractableGO = null;
+                m_hitInteractable = null;
+
                 Debug.Log("no interactable located");
             }
         }
