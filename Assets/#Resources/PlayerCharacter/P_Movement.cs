@@ -1,16 +1,14 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class P_Movement : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private InputSystem_Actions m_inputActions;
+
+    private void Awake()
     {
-        
+        m_inputActions = new InputSystem_Actions();
+        m_inputActions.Enable();
     }
 }
