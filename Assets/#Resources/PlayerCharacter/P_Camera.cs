@@ -8,10 +8,12 @@ public class P_Camera : PlayerCharacter
     [SerializeField] private float m_verticalSpeed = 1;
     [SerializeField] private float m_horizontalSpeed = 1;
 
+    [SerializeField] private GameObject m_playerBody;
     protected override void Awake()
     {
         base.Awake();
 
+        m_playerBody = transform.parent.gameObject;
         m_inputActions.Player.Look.performed += OnLook;
     }
 
@@ -35,8 +37,8 @@ public class P_Camera : PlayerCharacter
 
     private void HandleHRotation(float x)
     {
-        Vector3 HRotation = transform.eulerAngles;
+        Vector3 HRotation = m_playerBody.transform.eulerAngles;
         HRotation.y += x * 0.1f * m_horizontalSpeed;
-        transform.eulerAngles = HRotation;
+        m_playerBody.transform.eulerAngles = HRotation;
     }
 }
