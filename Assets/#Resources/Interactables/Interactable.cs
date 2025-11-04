@@ -1,26 +1,59 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public class Interactable : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    [Header("OnTargeted")]
+    [SerializeField] List<UnityEvent> m_onTargetedEvents;
+    [Header("OnHit")]
+    [SerializeField] List<UnityEvent> m_onHitEvents;
+
+    [Header("Intearction Type")]
+    [SerializeField] bool m_proximityBased;
+    private bool m_inTriggerZone;
+    private void Awake()
     {
-        
     }
 
     public virtual void OnTargeted()
     {
-        Debug.Log(name);
+        foreach (var e in m_onTargetedEvents)
+        {
+            e.Invoke();
+        }
     }
 
     public virtual void OnHit()
     {
+        foreach (var e in m_onHitEvents)
+        {
+            e.Invoke();
+        }
+    }
 
+    public virtual void OnTriggerEnter(Collider other)
+    {
+        if (!m_proximityBased) return;
+
+        if(other.TryGetComponent<FPS_CharBase>(out var fpsChar))
+        {
+            m_inTriggerZone = true;
+            Debug.Log($"Character in TriggerZone: {gameObject.name}");
+        }
+    }
+
+    public virtual void OnTriggerExit(Collider other)
+    {
+        if (!m_proximityBased) return;
+
+        if (other.TryGetComponent<FPS_CharBase>(out var fpsChar))
+        {
+            m_inTriggerZone = false;
+            Debug.Log($"Character in TriggerZone: {gameObject.name}");
+        }
     }
 }
