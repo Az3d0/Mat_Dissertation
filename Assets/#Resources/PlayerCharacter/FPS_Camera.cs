@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class FPS_Camera : FPSChar_Base
+public class FPS_Camera : FPS_CharBase
 {
 
     [SerializeField] private float m_verticalSpeed = 1;

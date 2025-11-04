@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FPSChar_Base : MonoBehaviour
+public class FPS_CharBase : MonoBehaviour
 
 {
     protected InputSystem_Actions m_inputActions;

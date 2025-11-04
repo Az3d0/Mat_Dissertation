@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
-public class FPS_Movement : FPSChar_Base
+public class FPS_Movement : FPS_CharBase
 {
 
     [SerializeField] private float  m_speed = 1;

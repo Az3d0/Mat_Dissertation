@@ -4,7 +4,7 @@ using System.Security;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class FPS_Interaction : FPSChar_Base
+public class FPS_Interaction : FPS_CharBase
 {
 
     private Ray m_ray;
