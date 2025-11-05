@@ -28,13 +28,12 @@ public class FPS_Movement : FPS_CharBase
         StopMovement();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if(m_isMoving)
+        if (m_isMoving)
         {
             m_Rigidbody.AddForce(m_playerMovementDirection * m_speed * 0.01f, ForceMode.Force);
         }
-
     }
 
     private void OnMoveAction(InputAction.CallbackContext context)
