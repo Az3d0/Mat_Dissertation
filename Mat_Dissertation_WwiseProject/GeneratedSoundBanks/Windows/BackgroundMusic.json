@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "626769978",
+    "Type": "User",
+    "GUID": "{96A9F16E-3E82-4111-B29D-332AFD4DF90C}",
+    "Language": "SFX",
+    "Hash": "{34AF9615-32CC-6C27-0870-C69823B7997D}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\BackgroundMusic",
+    "ShortName": "BackgroundMusic",
+    "Path": "BackgroundMusic.bnk",
+    "Media": [
+     {
+      "Id": "727560271",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "diss loop 1 fast.wav",
+      "CachePath": "58/{588F2665-A014-2214-BCB9-FB479570D8FF}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3356447979",
+      "Name": "Play_diss_loop_1_fast",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_diss_loop_1_fast",
+      "GUID": "{11A43B1D-71AD-4C25-8B51-C30A2203F72D}",
+      "DurationType": "OneShot",
+      "DurationMin": "40.85109",
+      "DurationMax": "40.85109",
+      "MediaRefs": [
+       {
+        "Id": "727560271"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{6B41F46B-E0A5-EFA7-E816-A19938B79AF5}"
+ }
+}
