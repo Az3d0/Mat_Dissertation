@@ -2,6 +2,8 @@ using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
+
 public class MovingPlatform : MonoBehaviour
 {
     private Rigidbody2D m_rb;

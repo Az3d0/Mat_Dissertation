@@ -8,9 +8,5 @@ public class Plat_CharBase: MonoBehaviour
         m_inputActions = new InputSystem_Actions();
         m_inputActions.Enable();
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
