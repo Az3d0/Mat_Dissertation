@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 74548f0213c1264b8e52d2482c0df769
     GuidInternal: 
-    m_lastTime: -8584393209985166892
-    List: []
+    m_lastTime: -8584389199886596097
+    List:
+    - name: BackgroundMusic
+      guid: 6ef1a996823e1141b29d332afd4df90c
+      id: 626769978
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 74548f0213c1264b8e52d2482c0df769
+      - ElementName: BackgroundMusic
+        ObjectType: 7
+        guid: 6ef1a996823e1141b29d332afd4df90c
+      Path: SoundBanks\Default Work Unit\BackgroundMusic
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +94,59 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: cb4f89ac16354046b3746729c79f4995
     GuidInternal: 
-    m_lastTime: -8584393209985259768
-    List: []
+    m_lastTime: -8584389189652138586
+    List:
+    - name: Play_diss_loop_1_fast
+      guid: 1d3ba411ad71254c8b51c30a2203f72d
+      id: 3356447979
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cb4f89ac16354046b3746729c79f4995
+      - ElementName: Play_diss_loop_1_fast
+        ObjectType: 3
+        guid: 1d3ba411ad71254c8b51c30a2203f72d
+      Path: Events\Default Work Unit\Play_diss_loop_1_fast
+      maxAttenuation: 0
+      maxDuration: 40.85109
+      minDuration: 40.85109
+    - name: Play_diss_loop_1_slow
+      guid: b88ae57a60a9a84dbf8d2b5d76b77c58
+      id: 4054934458
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cb4f89ac16354046b3746729c79f4995
+      - ElementName: Play_diss_loop_1_slow
+        ObjectType: 3
+        guid: b88ae57a60a9a84dbf8d2b5d76b77c58
+      Path: Events\Default Work Unit\Play_diss_loop_1_slow
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_diss_loop_1_tup
+      guid: fdadb728ca7a8f4987a17343c2fc743e
+      id: 2949879716
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cb4f89ac16354046b3746729c79f4995
+      - ElementName: Play_diss_loop_1_tup
+        ObjectType: 3
+        guid: fdadb728ca7a8f4987a17343c2fc743e
+      Path: Events\Default Work Unit\Play_diss_loop_1_tup
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -122,7 +187,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: f68e4b3ba8eda34d84f6082c20574bba
     GuidInternal: 
-    m_lastTime: -8584393209985153134
+    m_lastTime: -8584389198978758946
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -139,7 +204,7 @@ MonoBehaviour:
     m_lastTime: -8584393209985140948
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000070000000a0000000b0000000c0000000e0000000f00000010000000110000001200000013000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -1,0 +1,36 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "Mat_Dissertation_WwiseProject",
+   "GUID": "{F59043E5-A02D-433B-B30A-3508B74C910B}",
+   "Generator": "2024.1.9.8920"
+  },
+  "CacheRoot": "../../../../Mat_Dissertation_WwiseProject/.cache",
+  "Platforms": [
+   {
+    "Name": "Mac",
+    "GUID": "{E3DEC362-880A-4363-8E8A-42B309611653}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "../../../../Mat_Dissertation_WwiseProject/GeneratedSoundBanks/Mac"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{E92A3023-9895-4B92-8571-3CEA998F0248}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "../../../../Mat_Dissertation_WwiseProject/GeneratedSoundBanks/Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{4529F799-453E-45E1-9B60-F9C2118C7909}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{68BF579F-FF7D-96FE-DAA8-AE99C3A3D102}"
+ }
+}
