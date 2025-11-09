@@ -1,20 +1,23 @@
 using System;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class FPS_Camera : FPS_CharBase
+[RequireComponent(typeof(FPS_InputHandler))]
+public class FPS_Camera : MonoBehaviour
 {
 
     [SerializeField] private float m_verticalSpeed = 1;
     [SerializeField] private float m_horizontalSpeed = 1;
 
     [SerializeField] private GameObject m_playerBody;
-    protected override void Awake()
-    {
-        base.Awake();
+    [SerializeField] private CinemachineCamera m_camera;
 
-        m_playerBody = transform.parent.gameObject;
-        m_inputActions.Player.Look.performed += OnLook;
+    private FPS_InputHandler m_InputHandler;
+    private void Awake()
+    {
+        m_InputHandler = GetComponent<FPS_InputHandler>();
+        m_InputHandler.m_inputActions.Player.Look.performed += OnLook;
     }
 
     private void OnLook(InputAction.CallbackContext context)
@@ -26,13 +29,13 @@ public class FPS_Camera : FPS_CharBase
 
     private void HandleVRotation(float y)
     {
-        Vector3 VRotation = transform.eulerAngles;
+        Vector3 VRotation = m_camera.transform.eulerAngles;
         VRotation.z = 0;
         if (VRotation.x > 90) VRotation.x = - (360 - VRotation.x);
         VRotation.x += -y * 0.1f * m_verticalSpeed;
 
         VRotation.x = Mathf.Clamp(VRotation.x, -85, 85);
-        transform.eulerAngles = VRotation;
+        m_camera.transform.eulerAngles = VRotation;
     }
 
     private void HandleHRotation(float x)

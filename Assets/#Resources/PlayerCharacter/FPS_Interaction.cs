@@ -1,25 +1,29 @@
 using System;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class FPS_Interaction : FPS_CharBase
+[RequireComponent(typeof(FPS_InputHandler))]
+public class FPS_Interaction : MonoBehaviour
 {
 
     private Ray m_ray;
     private GameObject m_hitInteractableGO;
     private Interactable m_hitInteractable;
+    private FPS_InputHandler m_inputHandler;
+
+    [SerializeField] private CinemachineCamera m_camera;
 
     [SerializeField] private float m_rayLength = 3f;
 
     public Action<RaycastHit> ObjectDetected;
 
-    protected override void Awake()
+    private void Awake()
     {
-        base.Awake();
-
-        m_inputActions.Player.Interact.started += OnInteract;
+        m_inputHandler = GetComponent<FPS_InputHandler>();
+        m_inputHandler.m_inputActions.Player.Interact.started += OnInteract;
     }
 
     private void OnInteract(InputAction.CallbackContext context)
@@ -37,7 +41,7 @@ public class FPS_Interaction : FPS_CharBase
 
     void InteractionDetector()
     {
-        m_ray = new Ray(transform.position, transform.forward);
+        m_ray = new Ray(m_camera.transform.position, m_camera.transform.forward);
         
         if (Physics.Raycast(m_ray, out RaycastHit hitInfo, m_rayLength))
         {
