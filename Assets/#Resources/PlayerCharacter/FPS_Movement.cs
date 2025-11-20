@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent (typeof(CharacterController))]
-[RequireComponent (typeof(FPS_InputHandler))]
+[RequireComponent (typeof(InputHandler))]
 public class FPS_Movement : MonoBehaviour
 {
 
@@ -14,12 +14,12 @@ public class FPS_Movement : MonoBehaviour
     private bool m_isMoving;
     private Vector3 m_playerMovementForce;
     private CharacterController m_CharacterController;
-    private FPS_InputHandler m_inputHandler;
+    private InputHandler m_inputHandler;
     private void Awake()
     {
 
         m_CharacterController = GetComponent<CharacterController>();
-        m_inputHandler = GetComponent<FPS_InputHandler>();
+        m_inputHandler = GetComponent<InputHandler>();
 
         m_inputHandler.m_inputActions.Player.Move.performed += OnMoveAction;
         m_inputHandler.m_inputActions.Player.Move.canceled += OnMoveActionCancelled;
@@ -40,6 +40,7 @@ public class FPS_Movement : MonoBehaviour
 
     private void OnMoveAction(InputAction.CallbackContext context)
     {
+        Debug.Log("Fps char moving");
         HandleMovement(context.ReadValue<Vector2>());
     }
 

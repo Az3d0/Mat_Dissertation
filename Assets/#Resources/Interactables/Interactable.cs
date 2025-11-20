@@ -35,7 +35,7 @@ public class Interactable : MonoBehaviour
     {
         if (!m_proximityBased) return;
 
-        if(other.TryGetComponent<FPS_InputHandler>(out var fpsChar))
+        if(other.TryGetComponent<InputHandler>(out var fpsChar))
         {
             m_inTriggerZone = true;
             Debug.Log($"Character in TriggerZone: {gameObject.name}");
@@ -46,7 +46,7 @@ public class Interactable : MonoBehaviour
     {
         if (!m_proximityBased) return;
 
-        if (other.TryGetComponent<FPS_InputHandler>(out var fpsChar))
+        if (other.TryGetComponent<InputHandler>(out var fpsChar))
         {
             m_inTriggerZone = false;
             Debug.Log($"Character left TriggerZone: {gameObject.name}");

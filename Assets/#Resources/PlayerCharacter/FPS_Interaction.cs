@@ -5,14 +5,14 @@ using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(FPS_InputHandler))]
+[RequireComponent(typeof(InputHandler))]
 public class FPS_Interaction : MonoBehaviour
 {
 
     private Ray m_ray;
     private GameObject m_hitInteractableGO;
     private Interactable m_hitInteractable;
-    private FPS_InputHandler m_inputHandler;
+    private InputHandler m_inputHandler;
 
     [SerializeField] private CinemachineCamera m_camera;
 
@@ -22,7 +22,7 @@ public class FPS_Interaction : MonoBehaviour
 
     private void Awake()
     {
-        m_inputHandler = GetComponent<FPS_InputHandler>();
+        m_inputHandler = GetComponent<InputHandler>();
         m_inputHandler.m_inputActions.Player.Interact.started += OnInteract;
     }
 

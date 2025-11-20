@@ -5,30 +5,31 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
 
-
-public class Plat_Movement : Plat_CharBase
+[RequireComponent (typeof(InputHandler))]
+public class Plat_Movement : MonoBehaviour
 {
 
-    private Rigidbody2D m_Rigidbody;
+    private Rigidbody2D m_rigidbody;
     private Vector2 m_playerMovementDirection;
     private bool m_isMoving;
+    private InputHandler m_inputHandler;
 
     [SerializeField] private float m_speed = 1f;
 
-    protected override void Awake()
+    private void Awake()
     {
-        base.Awake();
+        m_inputHandler = GetComponent<InputHandler>();
 
-        m_inputActions.Plat_Player.Move.started += OnMoveAction;
-        m_inputActions.Plat_Player.Move.canceled += OnMoveActionCancelled;
+        m_inputHandler.m_inputActions.Plat_Player.Move.started += OnMoveAction;
+        m_inputHandler.m_inputActions.Plat_Player.Move.canceled += OnMoveActionCancelled;
 
-        m_Rigidbody = GetComponent<Rigidbody2D>();
+        m_rigidbody = GetComponent<Rigidbody2D>();
     }
     private void FixedUpdate()
     {
         if (m_isMoving)
         {
-            m_Rigidbody.AddForce(m_playerMovementDirection * m_speed * 0.01f, ForceMode2D.Force);
+            m_rigidbody.AddForce(m_playerMovementDirection * m_speed * 0.01f, ForceMode2D.Force);
         }
     }
     private void OnMoveActionCancelled(InputAction.CallbackContext context)
@@ -43,6 +44,7 @@ public class Plat_Movement : Plat_CharBase
 
     private void OnMoveAction(InputAction.CallbackContext context)
     {
+        Debug.Log("Plat char moving");
         HandleMovement(context.ReadValue<Vector2>());
     }
 

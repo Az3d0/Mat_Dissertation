@@ -13,6 +13,9 @@ public class CameraManager : MonoBehaviour
 
     private List<CinemachineCamera> m_cameras;
     private CinemachineCamera m_enabledCamera;
+
+    
+    [SerializeField] private GameObject m_defaultCamera;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -38,12 +41,11 @@ public class CameraManager : MonoBehaviour
         }
     }
 
-    public void TryUpdateCamera(object camera)
+    public void TryUpdateCamera(object obj)
     {
-        Debug.Log($"TryUpdateCamera Triggered. object: {camera.ToString()}");
-        if(camera.GetType() == typeof(GameObject))
+        if(obj.GetType() == typeof(GameObject))
         {
-            if (((GameObject)camera).TryGetComponent(out CinemachineCamera ccamera))
+            if (((GameObject)obj).TryGetComponent(out CinemachineCamera ccamera))
             {
                 if (m_enabledCamera != null)
                 {
@@ -56,16 +58,28 @@ public class CameraManager : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("TryUpdateCamera: GameObject does not have CinemachineCamera component");
+                Debug.LogWarning("TryUpdateCamera failed: no CinemachineCamera component attached to GameObject");
             }
         }
         else
         {
-            Debug.LogWarning("TryUpdateCamera: Parsed information must be GameObject");
+            Debug.LogWarning("TryUpdateCamera failed: no relevant data parsed");
         }
 
     }
 
+    public void ResetDefaultCamera()
+    {
+        if (m_defaultCamera == null)
+        {
+            Debug.LogWarning("ResetDefaultCamera failed: No default camera assigned."); 
+            return;
+        }
+
+        TryUpdateCamera(m_defaultCamera);
+    }
+
+    //delete this later
     public void TestOnTryUpdateCamera(object obj)
     {
         if(obj.GetType() == typeof(string))

@@ -3,11 +3,6 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.Events;
 
-[System.Serializable]
-public class CustomGameEvent : UnityEvent<Component, object>
-{
-
-}
 public class GameEventListener : MonoBehaviour
 {
     public GameEvent GameEvent;
@@ -26,13 +21,35 @@ public class GameEventListener : MonoBehaviour
 
     public void OnEventRaised(object data)
     {
-        //Response?.Invoke(data);
+        if (data == null)
+        {
+            Response?.Invoke();
+        }
+        else
+        {
+            //loop through all events assigned in the editor
+            for (int i = 0; i < Response.GetPersistentEventCount(); i++)
+            {
+                try
+                {
+                    //get UnityEvent i 
+                    object obj = Response.GetPersistentTarget(i);
 
-        object obj = Response.GetPersistentTarget(0);
-        object[] args = {data};
+                    //modify parsed data
+                    object[] args = { data };
 
-        MethodInfo method = obj.GetType().GetMethod(Response.GetPersistentMethodName(0));
+                    //get the method by name assigned in editor
+                    MethodInfo method = obj.GetType().GetMethod(Response.GetPersistentMethodName(i));
 
-        method.Invoke(obj, args);
+                    //invoke the UnityEvent using the parsed data instead of the one assigned in the editor
+                    method.Invoke(obj, args);
+
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning($"Couldn't invoke action {Response.GetPersistentMethodName(i).ToString()}. Error:{e.Message}");
+                }
+            }
+        }
     }
 }

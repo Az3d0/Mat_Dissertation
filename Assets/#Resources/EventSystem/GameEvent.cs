@@ -15,7 +15,6 @@ public class GameEvent : ScriptableObject
     }
     public void ParseGameObjectData(GameObject data)
     {
-
         Raise(data);
     }
 
@@ -27,6 +26,11 @@ public class GameEvent : ScriptableObject
     public void ParseStringData(string data)
     {
         Raise(data);
+    }
+
+    public void ParseNoData()
+    {
+        Raise(null);
     }
     public void RegisterListener(GameEventListener listener)
     {
