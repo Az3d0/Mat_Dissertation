@@ -347,10 +347,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2572563955074639300}
+  - component: {fileID: 6880580967841363303}
   - component: {fileID: 7889577579260497111}
   - component: {fileID: 5806148952547530470}
   - component: {fileID: 4839498458379285875}
-  - component: {fileID: 6880580967841363303}
   - component: {fileID: 5259979094878726015}
   m_Layer: 0
   m_Name: Monitor_Base
@@ -376,6 +376,21 @@ Transform:
   - {fileID: 5755472141863242736}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6880580967841363303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5843304781499251227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ae3daaa04a7d741b9a14cef939e8f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  m_onTargetedEvents: []
+  m_onHitEvents: []
+  m_proximityBased: 0
 --- !u!33 &7889577579260497111
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -453,36 +468,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6880580967841363303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5843304781499251227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1ae3daaa04a7d741b9a14cef939e8f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  m_onTargetedEvents: []
-  m_onHitEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3317052256270728603, guid: 24b5925a4c002284e95cb6a36b334934, type: 3}
-        m_TargetAssemblyTypeName: CameraManager, Assembly-CSharp
-        m_MethodName: EnableCamera
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 4034883531493006678}
-          m_ObjectArgumentAssemblyTypeName: Unity.Cinemachine.CinemachineCamera,
-            Unity.Cinemachine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_proximityBased: 0
 --- !u!65 &5259979094878726015
 BoxCollider:
   m_ObjectHideFlags: 0

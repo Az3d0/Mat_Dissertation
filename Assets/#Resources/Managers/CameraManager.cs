@@ -1,8 +1,10 @@
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class CameraManager : MonoBehaviour
 
@@ -36,15 +38,39 @@ public class CameraManager : MonoBehaviour
         }
     }
 
-    public void EnableCamera(CinemachineCamera camera)
+    public void TryUpdateCamera(object camera)
     {
-        if(m_enabledCamera != null)
+        Debug.Log($"TryUpdateCamera Triggered. object: {camera.ToString()}");
+        if(camera.GetType() == typeof(GameObject))
         {
-            m_enabledCamera.Priority = 0;
+            if (((GameObject)camera).TryGetComponent(out CinemachineCamera ccamera))
+            {
+                if (m_enabledCamera != null)
+                {
+                    m_enabledCamera.Priority = 0;
+                }
+
+                ccamera.Priority = 1;
+
+                m_enabledCamera = ccamera;
+            }
+            else
+            {
+                Debug.LogWarning("TryUpdateCamera: GameObject does not have CinemachineCamera component");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("TryUpdateCamera: Parsed information must be GameObject");
         }
 
-        camera.Priority = 1;
+    }
 
-        m_enabledCamera = camera;
+    public void TestOnTryUpdateCamera(object obj)
+    {
+        if(obj.GetType() == typeof(string))
+        {
+            Debug.Log(obj.ToString());
+        }
     }
 }

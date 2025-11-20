@@ -62,8 +62,6 @@ public class FPS_Interaction : MonoBehaviour
             {
                 m_hitInteractableGO = null;
                 m_hitInteractable = null;
-
-                Debug.Log("no interactable located");
             }
         }
     }
