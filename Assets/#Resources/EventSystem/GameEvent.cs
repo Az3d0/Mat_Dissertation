@@ -5,10 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GameEvent", menuName = "Scriptable Objects/GameEvent")]
 public class GameEvent : ScriptableObject
 {
-    public List<GameEventListener> Listeners = new List<GameEventListener>();
+    public List<GameEventChannel> Listeners = new List<GameEventChannel>();
     private void Raise(object data)
     {
-        foreach (GameEventListener listener in Listeners)
+        foreach (GameEventChannel listener in Listeners)
         {
             listener.OnEventRaised(data);
         }
@@ -32,12 +32,12 @@ public class GameEvent : ScriptableObject
     {
         Raise(null);
     }
-    public void RegisterListener(GameEventListener listener)
+    public void RegisterListener(GameEventChannel listener)
     {
         if(!Listeners.Contains(listener)) Listeners.Add(listener);
     }
 
-    public void UnregisterListener(GameEventListener listener)
+    public void UnregisterListener(GameEventChannel listener)
     {
         if (Listeners.Contains(listener)) Listeners.Remove(listener);
     }

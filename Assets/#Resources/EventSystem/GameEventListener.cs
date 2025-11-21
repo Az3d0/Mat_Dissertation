@@ -1,23 +1,38 @@
+using NUnit.Framework;
 using System;
+using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class GameEventListener : MonoBehaviour
 {
-    public GameEvent GameEvent;
-    public UnityEvent Response;
+    public List<GameEventChannel> EventChannels;
 
-    public delegate void test(object o);
     private void OnEnable()
     {
-        GameEvent.RegisterListener(this);
+        foreach(GameEventChannel channel in EventChannels)
+        {
+            channel.GameEvent.RegisterListener(channel);
+        }
     }
 
     private void OnDisable()
     {
-        GameEvent.UnregisterListener(this);
+        foreach (GameEventChannel channel in EventChannels)
+        {
+            channel.GameEvent.UnregisterListener(channel);
+        }
     }
+}
+
+[System.Serializable]
+public class GameEventChannel
+{
+    public GameEvent GameEvent;
+    public UnityEvent Response;
+
 
     public void OnEventRaised(object data)
     {
@@ -52,4 +67,5 @@ public class GameEventListener : MonoBehaviour
             }
         }
     }
+
 }

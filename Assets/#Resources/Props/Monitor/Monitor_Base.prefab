@@ -406,12 +406,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: e7483df010f6229449843d3a26d8c346, type: 2}
+      - m_Target: {fileID: 11400000, guid: 3a0e180d8e3eb204099d54685e783b2a, type: 2}
         m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
         m_MethodName: ParseGameObjectData
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 9199205118983742765}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 12b968ada3f05e14dbc6765aa04e134a, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: ParseGameObjectData
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3828489445910473358}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -776,6 +788,11 @@ PrefabInstance:
 --- !u!4 &990474810533807204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5433832652428743795, guid: 3d417e109ebd3b14888205afaeefe980, type: 3}
+  m_PrefabInstance: {fileID: 5104273370820120599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3828489445910473358 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8356291994874247833, guid: 3d417e109ebd3b14888205afaeefe980, type: 3}
   m_PrefabInstance: {fileID: 5104273370820120599}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &9199205118983742765 stripped

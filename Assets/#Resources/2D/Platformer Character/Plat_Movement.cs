@@ -19,11 +19,11 @@ public class Plat_Movement : MonoBehaviour
     private void Awake()
     {
         m_inputHandler = GetComponent<InputHandler>();
-
-        m_inputHandler.m_inputActions.Plat_Player.Move.started += OnMoveAction;
-        m_inputHandler.m_inputActions.Plat_Player.Move.canceled += OnMoveActionCancelled;
-
         m_rigidbody = GetComponent<Rigidbody2D>();
+
+        Debug.Log(m_inputHandler);
+        m_inputHandler.m_inputActions.Plat_Player.Move.performed += OnMoveAction;
+        m_inputHandler.m_inputActions.Plat_Player.Move.canceled += OnMoveAction;
     }
     private void FixedUpdate()
     {
@@ -32,24 +32,15 @@ public class Plat_Movement : MonoBehaviour
             m_rigidbody.AddForce(m_playerMovementDirection * m_speed * 0.01f, ForceMode2D.Force);
         }
     }
-    private void OnMoveActionCancelled(InputAction.CallbackContext context)
-    {
-        StopMovement();
-    }
-
-    private void StopMovement()
-    {
-
-    }
 
     private void OnMoveAction(InputAction.CallbackContext context)
     {
-        Debug.Log("Plat char moving");
         HandleMovement(context.ReadValue<Vector2>());
     }
 
     private void HandleMovement(Vector2 movementInput)
     {
+        Debug.Log("plat character moving");
         m_playerMovementDirection = new Vector2(movementInput.x, movementInput.y);
 
         m_isMoving = movementInput.x != 0 || movementInput.y != 0;

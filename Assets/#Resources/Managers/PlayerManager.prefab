@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5858626729718315567}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.41252, y: 0, z: 7.07735}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84eb2323dfa6a8141a3a4ffcf55bbbac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
+  m_defaultPlayer: {fileID: 0}
 --- !u!114 &5579933068692015249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,7 +58,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7825f4197b66484a99a00c220c2d9f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
-  GameEvent: {fileID: 11400000, guid: e7483df010f6229449843d3a26d8c346, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls: []
+  EventChannels: []

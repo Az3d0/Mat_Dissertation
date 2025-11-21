@@ -79,12 +79,4 @@ public class CameraManager : MonoBehaviour
         TryUpdateCamera(m_defaultCamera);
     }
 
-    //delete this later
-    public void TestOnTryUpdateCamera(object obj)
-    {
-        if(obj.GetType() == typeof(string))
-        {
-            Debug.Log(obj.ToString());
-        }
-    }
 }
