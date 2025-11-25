@@ -1108,6 +1108,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Exit"",
+                    ""type"": ""Button"",
+                    ""id"": ""5e6ec057-d20d-4c71-98fb-174771fba103"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1185,6 +1194,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""accc16f2-1859-4300-9906-fead5269d852"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Exit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1282,6 +1302,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Plat_Player_Move = m_Plat_Player.FindAction("Move", throwIfNotFound: true);
         m_Plat_Player_Jump = m_Plat_Player.FindAction("Jump", throwIfNotFound: true);
         m_Plat_Player_Dash = m_Plat_Player.FindAction("Dash", throwIfNotFound: true);
+        m_Plat_Player_Exit = m_Plat_Player.FindAction("Exit", throwIfNotFound: true);
     }
 
     ~@InputSystem_Actions()
@@ -1746,6 +1767,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Plat_Player_Move;
     private readonly InputAction m_Plat_Player_Jump;
     private readonly InputAction m_Plat_Player_Dash;
+    private readonly InputAction m_Plat_Player_Exit;
     /// <summary>
     /// Provides access to input actions defined in input action map "Plat_Player".
     /// </summary>
@@ -1769,6 +1791,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Plat_Player/Dash".
         /// </summary>
         public InputAction @Dash => m_Wrapper.m_Plat_Player_Dash;
+        /// <summary>
+        /// Provides access to the underlying input action "Plat_Player/Exit".
+        /// </summary>
+        public InputAction @Exit => m_Wrapper.m_Plat_Player_Exit;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1804,6 +1830,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Dash.started += instance.OnDash;
             @Dash.performed += instance.OnDash;
             @Dash.canceled += instance.OnDash;
+            @Exit.started += instance.OnExit;
+            @Exit.performed += instance.OnExit;
+            @Exit.canceled += instance.OnExit;
         }
 
         /// <summary>
@@ -1824,6 +1853,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Dash.started -= instance.OnDash;
             @Dash.performed -= instance.OnDash;
             @Dash.canceled -= instance.OnDash;
+            @Exit.started -= instance.OnExit;
+            @Exit.performed -= instance.OnExit;
+            @Exit.canceled -= instance.OnExit;
         }
 
         /// <summary>
@@ -2099,5 +2131,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnDash(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Exit" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnExit(InputAction.CallbackContext context);
     }
 }

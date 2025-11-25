@@ -62,4 +62,15 @@ public class PlayerManager : MonoBehaviour
 
         TryUpdatePlayer(m_defaultPlayer);
     }
+
+    public void TryEnableDormantPlayer()
+    {
+        if(m_dormantPlayer == null)
+        {
+            Debug.LogWarning("TryActivateDormantPlayer failed: No dormant player assigned.");
+            return;
+        }
+
+        TryUpdatePlayer(m_dormantPlayer);
+    }
 }

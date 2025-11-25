@@ -13,8 +13,8 @@ public class Interactable : MonoBehaviour
     [Space(10)]
 
 
-    [SerializeField] UnityEvent m_onTargetedEvents;
-    [SerializeField] UnityEvent m_onHitEvents;
+    [SerializeField] private UnityEvent m_onTargetedEvents;
+    [SerializeField] private UnityEvent m_onHitEvents;
 
     [Header("Intearction Type")]
     [SerializeField] bool m_proximityBased;

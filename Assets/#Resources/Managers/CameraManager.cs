@@ -13,6 +13,7 @@ public class CameraManager : MonoBehaviour
 
     private List<CinemachineCamera> m_cameras;
     private CinemachineCamera m_enabledCamera;
+    private CinemachineCamera m_dormantCamera;
 
     
     [SerializeField] private GameObject m_defaultCamera;
@@ -49,17 +50,29 @@ public class CameraManager : MonoBehaviour
             {
                 if (m_enabledCamera != null)
                 {
+                    m_dormantCamera = m_enabledCamera;
                     m_enabledCamera.Priority = 0;
                 }
 
-                ccamera.Priority = 1;
-
                 m_enabledCamera = ccamera;
+                ccamera.Priority = 1;
             }
             else
             {
                 Debug.LogWarning("TryUpdateCamera failed: no CinemachineCamera component attached to GameObject");
             }
+        }
+        else if (obj.GetType() == typeof(CinemachineCamera))
+        {
+            CinemachineCamera ccamera = (CinemachineCamera)obj;
+            if (m_enabledCamera != null)
+            {
+                m_dormantCamera = m_enabledCamera;
+                m_enabledCamera.Priority = 0;
+            }
+
+            m_enabledCamera = ccamera;
+            ccamera.Priority = 1;
         }
         else
         {
@@ -77,6 +90,11 @@ public class CameraManager : MonoBehaviour
         }
 
         TryUpdateCamera(m_defaultCamera);
+    }
+
+    public void TryEnableDormantCamera()
+    {
+        TryUpdateCamera(m_dormantCamera);
     }
 
 }

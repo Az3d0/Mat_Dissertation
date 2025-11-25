@@ -14,9 +14,15 @@ public class FPS_Camera : MonoBehaviour
     [SerializeField] private CinemachineCamera m_camera;
 
     private InputHandler m_InputHandler;
+
+
     private void Awake()
     {
         m_InputHandler = GetComponent<InputHandler>();
+    }
+
+    private void Start()
+    {
         m_InputHandler.m_inputActions.Player.Look.performed += OnLook;
     }
 

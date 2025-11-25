@@ -35,13 +35,26 @@ public class UIManager : MonoBehaviour
                 }
 
                 m_enabledCanvas = canvas;
-                m_enabledCanvas.enabled = true;
+                canvas.enabled = true;
 
             }
             else
             {
                 Debug.LogWarning("TryUpdateUI failed: no Canvas component attached to GameObject");
             }
+        }
+        else if (obj.GetType() == typeof(Canvas))
+        {
+            Canvas canvas = (Canvas)obj;
+            if (m_enabledCanvas != null)
+            {
+                m_dormantCanvas = m_enabledCanvas;
+                m_enabledCanvas.enabled = false;
+            }
+
+            m_enabledCanvas = canvas;
+            canvas.enabled = true;
+
         }
         else
         {
@@ -76,5 +89,16 @@ public class UIManager : MonoBehaviour
         }
 
         TryUpdateUI(m_defaultUI);
+    }
+
+    public void TryEnableDormantUI()
+    {
+        if (m_dormantCanvas == null)
+        {
+            Debug.LogWarning("TryEnableDormantUI failed: No dormant player assigned.");
+            return;
+        }
+
+        TryUpdateUI(m_dormantCanvas);
     }
 }
