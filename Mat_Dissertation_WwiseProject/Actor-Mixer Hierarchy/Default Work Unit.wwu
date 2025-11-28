@@ -5,6 +5,11 @@
 			<ChildrenList>
 				<Sound Name="diss loop 1 fast" ID="{5255D323-47E4-4316-BF9C-0F56E859AE4C}" ShortID="171711783">
 					<PropertyList>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -30,6 +35,11 @@
 				</Sound>
 				<Sound Name="diss loop 1 tup" ID="{BCE5CB33-1F34-407A-AAC7-005BB435FF95}" ShortID="351786581">
 					<PropertyList>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -55,6 +65,11 @@
 				</Sound>
 				<Sound Name="diss loop 1 slow" ID="{3E34EB3A-558A-4634-A632-6AD3BD2126FF}" ShortID="361899924">
 					<PropertyList>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>

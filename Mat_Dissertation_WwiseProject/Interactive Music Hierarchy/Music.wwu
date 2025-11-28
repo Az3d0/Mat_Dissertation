@@ -54,7 +54,7 @@
 					<ChildrenList>
 						<MusicSegment Name="InteractiveMusic" ID="{F27E62A6-ED86-4AF0-992C-97643CBFF23B}" ShortID="827354871">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="41406.25"/>
+								<Property Name="EndPosition" Type="Real64" Value="45835.5440051933"/>
 								<Property Name="Tempo" Type="Real64" Value="96"/>
 							</PropertyList>
 							<ReferenceList>
@@ -381,6 +381,11 @@
 								</MusicTrack>
 								<MusicTrack Name="Melody" ID="{4133124B-130F-4F83-827B-2910CF29E8F0}" ShortID="713553508">
 									<PropertyList>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MusicTrackType" Type="int16" Value="3"/>
 									</PropertyList>
 									<ReferenceList>

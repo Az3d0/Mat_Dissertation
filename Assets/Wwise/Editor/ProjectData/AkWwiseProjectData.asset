@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 98163e1cec650a419a2597eca54f84f6
     GuidInternal: 
-    m_lastTime: -8584389167195164998
+    m_lastTime: -8584372655711916417
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9773b394c843ee44bb585bb8a42cbb36
     GuidInternal: 
-    m_lastTime: -8584389167197000006
+    m_lastTime: -8584372655713636807
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 74548f0213c1264b8e52d2482c0df769
     GuidInternal: 
-    m_lastTime: -8584389167195211143
+    m_lastTime: -8584372655216019449
     List:
     - name: BackgroundMusic
       guid: 6ef1a996823e1141b29d332afd4df90c
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: cb4f89ac16354046b3746729c79f4995
     GuidInternal: 
-    m_lastTime: -8584389167197642545
+    m_lastTime: -8584372655221382610
     List:
     - name: Play_diss_loop_1_fast
       guid: 1d3ba411ad71254c8b51c30a2203f72d
@@ -159,7 +159,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: dc9a5123946e7441b4372741e1575a32
     GuidInternal: 
-    m_lastTime: -8584389167197629065
+    m_lastTime: -8584372655219509163
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -173,7 +173,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 46e8ba5cb334ab4692d71bb1bc83e215
     GuidInternal: 
-    m_lastTime: -8584389167195185650
+    m_lastTime: -8584372655712016441
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -187,8 +187,87 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: f68e4b3ba8eda34d84f6082c20574bba
     GuidInternal: 
-    m_lastTime: -8584389167195185650
+    m_lastTime: -8584372655214319062
     List: []
+  - PhysicalPath: Switches\Music.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Music
+      ObjectType: 12
+      guid: c36610d582e65a4d8c20c59e5fc22ca9
+    ParentPath: Switches\Music
+    guid: c36610d582e65a4d8c20c59e5fc22ca9
+    GuidInternal: 
+    m_lastTime: -8584372656125288695
+    List:
+    - name: MelodySpeed
+      guid: 15ea6fb498d7dd4a9de69dadd5031315
+      id: 2660841726
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: c36610d582e65a4d8c20c59e5fc22ca9
+      - ElementName: MelodySpeed
+        ObjectType: 11
+        guid: 15ea6fb498d7dd4a9de69dadd5031315
+      Path: Switches\Music\MelodySpeed
+      values:
+      - name: Fast
+        guid: adcd1a49a22bd8448e938b52aeba49f8
+        id: 2965380179
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: c36610d582e65a4d8c20c59e5fc22ca9
+        - ElementName: MelodySpeed
+          ObjectType: 11
+          guid: 15ea6fb498d7dd4a9de69dadd5031315
+        - ElementName: Fast
+          ObjectType: 10
+          guid: adcd1a49a22bd8448e938b52aeba49f8
+      - name: Slow
+        guid: caef57feb6ff9340ac3b85780162e856
+        id: 787604482
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: c36610d582e65a4d8c20c59e5fc22ca9
+        - ElementName: MelodySpeed
+          ObjectType: 11
+          guid: 15ea6fb498d7dd4a9de69dadd5031315
+        - ElementName: Slow
+          ObjectType: 10
+          guid: caef57feb6ff9340ac3b85780162e856
+      - name: Tup
+        guid: 9e0927c192f4f14abf7ce209e0b0284c
+        id: 644653884
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: c36610d582e65a4d8c20c59e5fc22ca9
+        - ElementName: MelodySpeed
+          ObjectType: 11
+          guid: 15ea6fb498d7dd4a9de69dadd5031315
+        - ElementName: Tup
+          ObjectType: 10
+          guid: 9e0927c192f4f14abf7ce209e0b0284c
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -201,10 +280,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: d0d6d5347db12e4c9760e664bb5088d2
     GuidInternal: 
-    m_lastTime: -8584389167195175310
+    m_lastTime: -8584372655711926419
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 100000001300000014000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
