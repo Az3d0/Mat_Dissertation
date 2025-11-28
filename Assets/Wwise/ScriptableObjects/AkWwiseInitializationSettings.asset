@@ -18,8 +18,13 @@ MonoBehaviour:
   PlatformSettingsList:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 11400000, guid: 391d3f681af42524e8dd12878942552b, type: 2}
   - {fileID: 11400000, guid: e205f993a1351b749a314f3f4b1c6ffd, type: 2}
+=======
+  - {fileID: 11400000, guid: 8aecfe239cab4b44e924ca5f56d34f65, type: 2}
+  - {fileID: 11400000, guid: 5d93c0c7d1710304693c8f5935d993c1, type: 2}
+>>>>>>> Stashed changes
 =======
   - {fileID: 11400000, guid: 8aecfe239cab4b44e924ca5f56d34f65, type: 2}
   - {fileID: 11400000, guid: 5d93c0c7d1710304693c8f5935d993c1, type: 2}
