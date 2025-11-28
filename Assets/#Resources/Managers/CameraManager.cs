@@ -1,8 +1,10 @@
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class CameraManager : MonoBehaviour
 
@@ -11,6 +13,10 @@ public class CameraManager : MonoBehaviour
 
     private List<CinemachineCamera> m_cameras;
     private CinemachineCamera m_enabledCamera;
+    private CinemachineCamera m_dormantCamera;
+
+    
+    [SerializeField] private GameObject m_defaultCamera;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -36,15 +42,59 @@ public class CameraManager : MonoBehaviour
         }
     }
 
-    public void EnableCamera(CinemachineCamera camera)
+    public void TryUpdateCamera(object obj)
     {
-        if(m_enabledCamera != null)
+        if(obj.GetType() == typeof(GameObject))
         {
-            m_enabledCamera.Priority = 0;
+            if (((GameObject)obj).TryGetComponent(out CinemachineCamera ccamera))
+            {
+                if (m_enabledCamera != null)
+                {
+                    m_dormantCamera = m_enabledCamera;
+                    m_enabledCamera.Priority = 0;
+                }
+
+                m_enabledCamera = ccamera;
+                ccamera.Priority = 1;
+            }
+            else
+            {
+                Debug.LogWarning("TryUpdateCamera failed: no CinemachineCamera component attached to GameObject");
+            }
+        }
+        else if (obj.GetType() == typeof(CinemachineCamera))
+        {
+            CinemachineCamera ccamera = (CinemachineCamera)obj;
+            if (m_enabledCamera != null)
+            {
+                m_dormantCamera = m_enabledCamera;
+                m_enabledCamera.Priority = 0;
+            }
+
+            m_enabledCamera = ccamera;
+            ccamera.Priority = 1;
+        }
+        else
+        {
+            Debug.LogWarning("TryUpdateCamera failed: no relevant data parsed");
         }
 
-        camera.Priority = 1;
-
-        m_enabledCamera = camera;
     }
+
+    public void ResetDefaultCamera()
+    {
+        if (m_defaultCamera == null)
+        {
+            Debug.LogWarning("ResetDefaultCamera failed: No default camera assigned."); 
+            return;
+        }
+
+        TryUpdateCamera(m_defaultCamera);
+    }
+
+    public void TryEnableDormantCamera()
+    {
+        TryUpdateCamera(m_dormantCamera);
+    }
+
 }

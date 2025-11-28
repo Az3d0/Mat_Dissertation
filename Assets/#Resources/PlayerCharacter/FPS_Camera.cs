@@ -3,7 +3,7 @@ using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(FPS_InputHandler))]
+[RequireComponent(typeof(InputHandler))]
 public class FPS_Camera : MonoBehaviour
 {
 
@@ -13,10 +13,16 @@ public class FPS_Camera : MonoBehaviour
     [SerializeField] private GameObject m_playerBody;
     [SerializeField] private CinemachineCamera m_camera;
 
-    private FPS_InputHandler m_InputHandler;
+    private InputHandler m_InputHandler;
+
+
     private void Awake()
     {
-        m_InputHandler = GetComponent<FPS_InputHandler>();
+        m_InputHandler = GetComponent<InputHandler>();
+    }
+
+    private void Start()
+    {
         m_InputHandler.m_inputActions.Player.Look.performed += OnLook;
     }
 
