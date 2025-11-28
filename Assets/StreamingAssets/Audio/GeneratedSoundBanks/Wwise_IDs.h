@@ -11,26 +11,15 @@
 
 namespace AK
 {
-    namespace SWITCHES
+    namespace EVENTS
     {
-        namespace MELODYSPEED
-        {
-            static const AkUniqueID GROUP = 2660841726U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID FAST = 2965380179U;
-                static const AkUniqueID SLOW = 787604482U;
-                static const AkUniqueID TUP = 644653884U;
-            } // namespace SWITCH
-        } // namespace MELODYSPEED
-
-    } // namespace SWITCHES
+        static const AkUniqueID PLAY_DISS_LOOP_1_FAST = 3356447979U;
+    } // namespace EVENTS
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID BACKGROUNDMUSIC = 626769978U;
     } // namespace BANKS
 
     namespace BUSSES

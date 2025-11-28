@@ -41,37 +41,9 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
      }
-    ],
-    "SwitchGroups": [
-     {
-      "Id": "2660841726",
-      "Name": "MelodySpeed",
-      "ObjectPath": "\\Switches\\Music\\MelodySpeed",
-      "GUID": "{B46FEA15-D798-4ADD-9DE6-9DADD5031315}",
-      "Switches": [
-       {
-        "Id": "644653884",
-        "Name": "Tup",
-        "ObjectPath": "\\Switches\\Music\\MelodySpeed\\Tup",
-        "GUID": "{C127099E-F492-4AF1-BF7C-E209E0B0284C}"
-       },
-       {
-        "Id": "787604482",
-        "Name": "Slow",
-        "ObjectPath": "\\Switches\\Music\\MelodySpeed\\Slow",
-        "GUID": "{FE57EFCA-FFB6-4093-AC3B-85780162E856}"
-       },
-       {
-        "Id": "2965380179",
-        "Name": "Fast",
-        "ObjectPath": "\\Switches\\Music\\MelodySpeed\\Fast",
-        "GUID": "{491ACDAD-2BA2-44D8-8E93-8B52AEBA49F8}"
-       }
-      ]
-     }
     ]
    }
   ],
-  "FileHash": "{A0CC594A-4B1B-BB54-50CE-866E961E4D6C}"
+  "FileHash": "{6FB8F371-A0A6-3910-AA1A-A6E7DDE27969}"
  }
 }

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{3B4B8EF6-EDA8-4DA3-84F6-082C20574BBA}" SchemaVersion="123">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{3B4B8EF6-EDA8-4DA3-84F6-082C20574BBA}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{3B4B8EF6-EDA8-4DA3-84F6-082C20574BBA}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="MusicSpeed" ID="{923939A3-65F7-4536-B681-E07BABC7BD1F}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

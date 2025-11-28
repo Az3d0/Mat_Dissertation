@@ -4,9 +4,6 @@
 		<WorkUnit Name="Default Work Unit" ID="{AC894FCB-3516-4640-B374-6729C79F4995}" PersistMode="Standalone">
 			<ChildrenList>
 				<Event Name="Play_diss_loop_1_fast" ID="{11A43B1D-71AD-4C25-8B51-C30A2203F72D}">
-					<PropertyList>
-						<Property Name="Inclusion" Type="bool" Value="False"/>
-					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{5031B78F-049D-4E7D-A901-4175C38F7CCA}" ShortID="86777497">
 							<ReferenceList>
@@ -18,9 +15,6 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_diss_loop_1_slow" ID="{7AE58AB8-A960-4DA8-BF8D-2B5D76B77C58}">
-					<PropertyList>
-						<Property Name="Inclusion" Type="bool" Value="False"/>
-					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{F625C94B-DE9C-49B0-BC1D-ACEF8317030F}" ShortID="450453911">
 							<ReferenceList>
@@ -32,9 +26,6 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_diss_loop_1_tup" ID="{28B7ADFD-7ACA-498F-87A1-7343C2FC743E}">
-					<PropertyList>
-						<Property Name="Inclusion" Type="bool" Value="False"/>
-					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{861264DC-3DA3-4817-9314-851C67C0BB3F}" ShortID="824229714">
 							<ReferenceList>
