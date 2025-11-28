@@ -1,0 +1,123 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3991942870",
+    "Type": "User",
+    "GUID": "{80D05862-EA48-41B3-8455-067BD3AD39DD}",
+    "Language": "SFX",
+    "Hash": "{2A05E7E7-2A45-7B71-2609-2A30E4896293}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
+    "ShortName": "Music",
+    "Path": "Music.bnk",
+    "Media": [
+     {
+      "Id": "296146",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "InteractiveMusic\\ArpSlow.wav",
+      "CachePath": "0B/{0B2F7993-1DDE-658C-EFA5-CBDDF6C5CAAE}.wem"
+     },
+     {
+      "Id": "329622050",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "InteractiveMusic\\Bass.wav",
+      "CachePath": "B4/{B4A636F9-7D4E-D122-5608-C305221EA446}.wem"
+     },
+     {
+      "Id": "343454963",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "InteractiveMusic\\MelodyFast.wav",
+      "CachePath": "18/{18916B42-BDAF-2E3F-B0A1-DE46B2FDBDB2}.wem"
+     },
+     {
+      "Id": "567122657",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "InteractiveMusic\\MelodySlow.wav",
+      "CachePath": "E3/{E30F3DFA-BAE6-D55F-D752-007498BCA9FA}.wem"
+     },
+     {
+      "Id": "598727354",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "InteractiveMusic\\ArpTup.wav",
+      "CachePath": "B5/{B518D715-B78C-83C3-0DFC-EBF14EAE43F3}.wem"
+     },
+     {
+      "Id": "664645702",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "InteractiveMusic\\ArpFast.wav",
+      "CachePath": "79/{79293CB7-D005-7BCB-86D1-1F747D74E04A}.wem"
+     },
+     {
+      "Id": "709859594",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MelodyTup.wav",
+      "CachePath": "0B/{0BD168B3-E5AD-1B58-A021-5F72F87DDB19}.wem"
+     },
+     {
+      "Id": "765136955",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "InteractiveMusic\\Chords.wav",
+      "CachePath": "0E/{0E32EEFD-010D-597C-C7BC-13D5EF11F239}.wem"
+     },
+     {
+      "Id": "842916884",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "InteractiveMusic\\Drums.wav",
+      "CachePath": "A3/{A3BE9FAE-7A2A-1B52-46BC-9F31F2BE842F}.wem"
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "2660841726",
+      "Name": "MelodySpeed",
+      "ObjectPath": "\\Switches\\Music\\MelodySpeed",
+      "GUID": "{B46FEA15-D798-4ADD-9DE6-9DADD5031315}",
+      "Switches": [
+       {
+        "Id": "644653884",
+        "Name": "Tup",
+        "ObjectPath": "\\Switches\\Music\\MelodySpeed\\Tup",
+        "GUID": "{C127099E-F492-4AF1-BF7C-E209E0B0284C}"
+       },
+       {
+        "Id": "787604482",
+        "Name": "Slow",
+        "ObjectPath": "\\Switches\\Music\\MelodySpeed\\Slow",
+        "GUID": "{FE57EFCA-FFB6-4093-AC3B-85780162E856}"
+       },
+       {
+        "Id": "2965380179",
+        "Name": "Fast",
+        "ObjectPath": "\\Switches\\Music\\MelodySpeed\\Fast",
+        "GUID": "{491ACDAD-2BA2-44D8-8E93-8B52AEBA49F8}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{84BDDD2E-21BC-5C8B-0AE9-38B771010785}"
+ }
+}

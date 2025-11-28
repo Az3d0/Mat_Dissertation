@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D51066C3-E682-4D5A-8C20-C59E5FC22CA9}" SchemaVersion="123">
+	<Switches>
+		<WorkUnit Name="Music" ID="{D51066C3-E682-4D5A-8C20-C59E5FC22CA9}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="MelodySpeed" ID="{B46FEA15-D798-4ADD-9DE6-9DADD5031315}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Slow" ID="{FE57EFCA-FFB6-4093-AC3B-85780162E856}"/>
+						<Switch Name="Tup" ID="{C127099E-F492-4AF1-BF7C-E209E0B0284C}"/>
+						<Switch Name="Fast" ID="{491ACDAD-2BA2-44D8-8E93-8B52AEBA49F8}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

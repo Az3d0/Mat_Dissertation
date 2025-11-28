@@ -1,0 +1,11 @@
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	296146	Arp	C:\Unity\Mat_Dissertation\Mat_Dissertation_WwiseProject\.cache\0B\{0B2F7993-1DDE-658C-EFA5-CBDDF6C5CAAE}.wem		\Interactive Music Hierarchy\Music\Music Playlist Container\InteractiveMusic\Arp		7056096
+	329622050	Bass	C:\Unity\Mat_Dissertation\Mat_Dissertation_WwiseProject\.cache\B4\{B4A636F9-7D4E-D122-5608-C305221EA446}.wem		\Interactive Music Hierarchy\Music\Music Playlist Container\InteractiveMusic\Bass		7056096
+	343454963	Melody	C:\Unity\Mat_Dissertation\Mat_Dissertation_WwiseProject\.cache\18\{18916B42-BDAF-2E3F-B0A1-DE46B2FDBDB2}.wem		\Interactive Music Hierarchy\Music\Music Playlist Container\InteractiveMusic\Melody		7056096
+	567122657	Melody	C:\Unity\Mat_Dissertation\Mat_Dissertation_WwiseProject\.cache\E3\{E30F3DFA-BAE6-D55F-D752-007498BCA9FA}.wem		\Interactive Music Hierarchy\Music\Music Playlist Container\InteractiveMusic\Melody		7056096
+	598727354	Arp	C:\Unity\Mat_Dissertation\Mat_Dissertation_WwiseProject\.cache\B5\{B518D715-B78C-83C3-0DFC-EBF14EAE43F3}.wem		\Interactive Music Hierarchy\Music\Music Playlist Container\InteractiveMusic\Arp		7056096
+	664645702	Arp	C:\Unity\Mat_Dissertation\Mat_Dissertation_WwiseProject\.cache\79\{79293CB7-D005-7BCB-86D1-1F747D74E04A}.wem		\Interactive Music Hierarchy\Music\Music Playlist Container\InteractiveMusic\Arp		7056096
+	709859594	Melody	C:\Unity\Mat_Dissertation\Mat_Dissertation_WwiseProject\.cache\0B\{0BD168B3-E5AD-1B58-A021-5F72F87DDB19}.wem		\Interactive Music Hierarchy\Music\Music Playlist Container\InteractiveMusic\Melody		7056096
+	765136955	Chords	C:\Unity\Mat_Dissertation\Mat_Dissertation_WwiseProject\.cache\0E\{0E32EEFD-010D-597C-C7BC-13D5EF11F239}.wem		\Interactive Music Hierarchy\Music\Music Playlist Container\InteractiveMusic\Chords		7056096
+	842916884	Drums	C:\Unity\Mat_Dissertation\Mat_Dissertation_WwiseProject\.cache\A3\{A3BE9FAE-7A2A-1B52-46BC-9F31F2BE842F}.wem		\Interactive Music Hierarchy\Music\Music Playlist Container\InteractiveMusic\Drums		7056096
+

@@ -1,0 +1,304 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c70035fa2986754ea4f67993359af38, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: AK.Wwise.Unity.API.Editor::AkWwiseProjectData
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Virtual Acoustics
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 98163e1cec650a419a2597eca54f84f6
+    ParentPath: Virtual Acoustics\Default Work Unit
+    guid: 98163e1cec650a419a2597eca54f84f6
+    GuidInternal: 
+    m_lastTime: -8584393191982737654
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 9773b394c843ee44bb585bb8a42cbb36
+    ParentPath: Master-Mixer Hierarchy\Default Work Unit
+    guid: 9773b394c843ee44bb585bb8a42cbb36
+    GuidInternal: 
+    m_lastTime: -8584393191982827626
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9773b394c843ee44bb585bb8a42cbb36
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 74548f0213c1264b8e52d2482c0df769
+    ParentPath: SoundBanks\Default Work Unit
+    guid: 74548f0213c1264b8e52d2482c0df769
+    GuidInternal: 
+    m_lastTime: -8584372674350834016
+    List:
+    - name: Music
+      guid: 6258d08048eab3418455067bd3ad39dd
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 74548f0213c1264b8e52d2482c0df769
+      - ElementName: Music
+        ObjectType: 7
+        guid: 6258d08048eab3418455067bd3ad39dd
+      Path: SoundBanks\Default Work Unit\Music
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: cb4f89ac16354046b3746729c79f4995
+    ParentPath: Events\Default Work Unit
+    guid: cb4f89ac16354046b3746729c79f4995
+    GuidInternal: 
+    m_lastTime: -8584372674350974043
+    List:
+    - name: Play_diss_loop_1_fast
+      guid: 1d3ba411ad71254c8b51c30a2203f72d
+      id: 3356447979
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cb4f89ac16354046b3746729c79f4995
+      - ElementName: Play_diss_loop_1_fast
+        ObjectType: 3
+        guid: 1d3ba411ad71254c8b51c30a2203f72d
+      Path: Events\Default Work Unit\Play_diss_loop_1_fast
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_diss_loop_1_slow
+      guid: b88ae57a60a9a84dbf8d2b5d76b77c58
+      id: 4054934458
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cb4f89ac16354046b3746729c79f4995
+      - ElementName: Play_diss_loop_1_slow
+        ObjectType: 3
+        guid: b88ae57a60a9a84dbf8d2b5d76b77c58
+      Path: Events\Default Work Unit\Play_diss_loop_1_slow
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_diss_loop_1_tup
+      guid: fdadb728ca7a8f4987a17343c2fc743e
+      id: 2949879716
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cb4f89ac16354046b3746729c79f4995
+      - ElementName: Play_diss_loop_1_tup
+        ObjectType: 3
+        guid: fdadb728ca7a8f4987a17343c2fc743e
+      Path: Events\Default Work Unit\Play_diss_loop_1_tup
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: dc9a5123946e7441b4372741e1575a32
+    ParentPath: Game Parameters\Default Work Unit
+    guid: dc9a5123946e7441b4372741e1575a32
+    GuidInternal: 
+    m_lastTime: -8584372667788257463
+    List:
+    - name: MusicSpeed
+      guid: 070531a354ac4b4e97e926e5bde6b8b9
+      id: 1763041431
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: dc9a5123946e7441b4372741e1575a32
+      - ElementName: MusicSpeed
+        ObjectType: 13
+        guid: 070531a354ac4b4e97e926e5bde6b8b9
+      Path: Game Parameters\Default Work Unit\MusicSpeed
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 46e8ba5cb334ab4692d71bb1bc83e215
+    ParentPath: States\Default Work Unit
+    guid: 46e8ba5cb334ab4692d71bb1bc83e215
+    GuidInternal: 
+    m_lastTime: -8584393191982747701
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: f68e4b3ba8eda34d84f6082c20574bba
+    ParentPath: Switches\Default Work Unit
+    guid: f68e4b3ba8eda34d84f6082c20574bba
+    GuidInternal: 
+    m_lastTime: -8584372696028957450
+    List: []
+  - PhysicalPath: Switches\Music.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Music
+      ObjectType: 12
+      guid: c36610d582e65a4d8c20c59e5fc22ca9
+    ParentPath: Switches\Music
+    guid: c36610d582e65a4d8c20c59e5fc22ca9
+    GuidInternal: 
+    m_lastTime: -8584372667788137447
+    List:
+    - name: MelodySpeed
+      guid: 15ea6fb498d7dd4a9de69dadd5031315
+      id: 2660841726
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: c36610d582e65a4d8c20c59e5fc22ca9
+      - ElementName: MelodySpeed
+        ObjectType: 11
+        guid: 15ea6fb498d7dd4a9de69dadd5031315
+      Path: Switches\Music\MelodySpeed
+      values:
+      - name: Fast
+        guid: adcd1a49a22bd8448e938b52aeba49f8
+        id: 2965380179
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: c36610d582e65a4d8c20c59e5fc22ca9
+        - ElementName: MelodySpeed
+          ObjectType: 11
+          guid: 15ea6fb498d7dd4a9de69dadd5031315
+        - ElementName: Fast
+          ObjectType: 10
+          guid: adcd1a49a22bd8448e938b52aeba49f8
+      - name: Slow
+        guid: caef57feb6ff9340ac3b85780162e856
+        id: 787604482
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: c36610d582e65a4d8c20c59e5fc22ca9
+        - ElementName: MelodySpeed
+          ObjectType: 11
+          guid: 15ea6fb498d7dd4a9de69dadd5031315
+        - ElementName: Slow
+          ObjectType: 10
+          guid: caef57feb6ff9340ac3b85780162e856
+      - name: Tup
+        guid: 9e0927c192f4f14abf7ce209e0b0284c
+        id: 644653884
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: c36610d582e65a4d8c20c59e5fc22ca9
+        - ElementName: MelodySpeed
+          ObjectType: 11
+          guid: 15ea6fb498d7dd4a9de69dadd5031315
+        - ElementName: Tup
+          ObjectType: 10
+          guid: 9e0927c192f4f14abf7ce209e0b0284c
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: d0d6d5347db12e4c9760e664bb5088d2
+    ParentPath: Triggers\Default Work Unit
+    guid: d0d6d5347db12e4c9760e664bb5088d2
+    GuidInternal: 
+    m_lastTime: -8584393191982737654
+    List: []
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 010000000a0000000c0000000d0000000f0000001100000012000000
+  AutoSyncSelection: 0
+  autoPopulateEnabled: 1
+  currentDataSource: 0
+  CurrentPluginConfig: 
