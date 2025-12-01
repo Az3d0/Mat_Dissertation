@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 98163e1cec650a419a2597eca54f84f6
     GuidInternal: 
-    m_lastTime: -8584389167195164998
+    m_lastTime: -8584372655711916417
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9773b394c843ee44bb585bb8a42cbb36
     GuidInternal: 
-    m_lastTime: -8584389167197000006
+    m_lastTime: -8584372655713636807
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 74548f0213c1264b8e52d2482c0df769
     GuidInternal: 
-    m_lastTime: -8584370094474890289
+    m_lastTime: -8584370059157170260
     List:
     - name: Music
       guid: 1c47881724de3f4b980a1c7e2052574f
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: cb4f89ac16354046b3746729c79f4995
     GuidInternal: 
-    m_lastTime: -8584370094497874372
+    m_lastTime: -8584370060189237926
     List:
     - name: Play_InteractiveMusic
       guid: 187058c5035091498b493d11c619d0db
@@ -111,8 +111,8 @@ MonoBehaviour:
         guid: 187058c5035091498b493d11c619d0db
       Path: Events\Default Work Unit\Play_InteractiveMusic
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -125,7 +125,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: dc9a5123946e7441b4372741e1575a32
     GuidInternal: 
-    m_lastTime: -8584389167197629065
+    m_lastTime: -8584372655219509163
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -139,7 +139,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 46e8ba5cb334ab4692d71bb1bc83e215
     GuidInternal: 
-    m_lastTime: -8584389167195185650
+    m_lastTime: -8584372655712016441
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -153,7 +153,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: f68e4b3ba8eda34d84f6082c20574bba
     GuidInternal: 
-    m_lastTime: -8584389167195185650
+    m_lastTime: -8584372655214319062
     List: []
   - PhysicalPath: Switches\Music.wwu
     PathAndIcons:
@@ -166,7 +166,7 @@ MonoBehaviour:
     ParentPath: Switches\Music
     guid: c36610d582e65a4d8c20c59e5fc22ca9
     GuidInternal: 
-    m_lastTime: -8584370094474877862
+    m_lastTime: -8584370062608473802
     List:
     - name: MelodySpeed
       guid: 15ea6fb498d7dd4a9de69dadd5031315
@@ -246,10 +246,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: d0d6d5347db12e4c9760e664bb5088d2
     GuidInternal: 
-    m_lastTime: -8584389167195175310
+    m_lastTime: -8584372655711926419
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -5,10 +5,10 @@
 			<ChildrenList>
 				<Event Name="Play_InteractiveMusic" ID="{C5587018-5003-4991-8B49-3D11C619D0DB}">
 					<ChildrenList>
-						<Action Name="" ID="{35EC2C25-C440-4AB8-8253-389073145091}" ShortID="170422640">
+						<Action Name="" ID="{8FB86FD0-A6F8-40D9-94A1-1CECCE3FD0B6}" ShortID="923256833">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="InteractiveMusic" ID="{F27E62A6-ED86-4AF0-992C-97643CBFF23B}" WorkUnitID="{F991F406-127E-46D3-9FDA-E6E120BA6410}"/>
+									<ObjectRef Name="Music Playlist Container" ID="{323C00AD-A759-4A75-AE1E-4702439B0737}" WorkUnitID="{F991F406-127E-46D3-9FDA-E6E120BA6410}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

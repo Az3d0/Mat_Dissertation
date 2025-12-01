@@ -11,6 +11,11 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID PLAY_INTERACTIVEMUSIC = 2346973959U;
+    } // namespace EVENTS
+
     namespace SWITCHES
     {
         namespace MELODYSPEED

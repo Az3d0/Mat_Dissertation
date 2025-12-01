@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1788471C-DE24-4B3F-980A-1C7E2052574F}",
     "Language": "SFX",
-    "Hash": "{D4D0660F-B9CF-FF75-754F-0CDD06576783}",
+    "Hash": "{F153BF4D-55B4-88AE-26EA-DA1B4ADAE0CF}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -91,6 +91,44 @@
       "CachePath": "A3/{A3BE9FAE-7A2A-1B52-46BC-9F31F2BE842F}.wem"
      }
     ],
+    "Events": [
+     {
+      "Id": "2346973959",
+      "Name": "Play_InteractiveMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_InteractiveMusic",
+      "GUID": "{C5587018-5003-4991-8B49-3D11C619D0DB}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "296146"
+       },
+       {
+        "Id": "329622050"
+       },
+       {
+        "Id": "343454963"
+       },
+       {
+        "Id": "567122657"
+       },
+       {
+        "Id": "598727354"
+       },
+       {
+        "Id": "664645702"
+       },
+       {
+        "Id": "709859594"
+       },
+       {
+        "Id": "765136955"
+       },
+       {
+        "Id": "842916884"
+       }
+      ]
+     }
+    ],
     "SwitchGroups": [
      {
       "Id": "2660841726",
@@ -121,6 +159,6 @@
     ]
    }
   ],
-  "FileHash": "{189675F3-615E-95D3-BE11-91D3D8F72B53}"
+  "FileHash": "{6118282C-F4DA-031B-223A-DD3F32C9C46B}"
  }
 }

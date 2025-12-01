@@ -1,3 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2346973959	Play_InteractiveMusic			\Default Work Unit\Play_InteractiveMusic	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	296146	Arp	C:\Unity\Mat_Dissertation\Mat_Dissertation_WwiseProject\.cache\0B\{0B2F7993-1DDE-658C-EFA5-CBDDF6C5CAAE}.wem		\Interactive Music Hierarchy\Music\Music Playlist Container\InteractiveMusic\Arp		7056096
 	329622050	Bass	C:\Unity\Mat_Dissertation\Mat_Dissertation_WwiseProject\.cache\B4\{B4A636F9-7D4E-D122-5608-C305221EA446}.wem		\Interactive Music Hierarchy\Music\Music Playlist Container\InteractiveMusic\Bass		7056096

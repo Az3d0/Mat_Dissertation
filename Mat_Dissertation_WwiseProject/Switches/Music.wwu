@@ -11,6 +11,7 @@
 						<Switch Name="Slow" ID="{FE57EFCA-FFB6-4093-AC3B-85780162E856}"/>
 						<Switch Name="Tup" ID="{C127099E-F492-4AF1-BF7C-E209E0B0284C}"/>
 						<Switch Name="Fast" ID="{491ACDAD-2BA2-44D8-8E93-8B52AEBA49F8}"/>
+						<Switch Name="Null" ID="{EF699DBA-0A80-4612-BA12-F8AEB4852312}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>

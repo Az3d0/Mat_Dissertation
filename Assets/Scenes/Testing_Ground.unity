@@ -430,7 +430,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e0407d42d914e494396855acedb7c661, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: cc339a7a6f2fbcd41bbd961510f35f13, type: 2}
   decodeBank: 0
   overrideLoadSetting: 0
   loadAsynchronous: 0
@@ -1558,18 +1558,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 146688904}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2156295113172126242}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
@@ -1577,16 +1589,32 @@ PrefabInstance:
       value: ToggleMusic
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ToggleState
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: MixingTable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Lever, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 2156295113172126242}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: Lever, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5594772730917826710, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

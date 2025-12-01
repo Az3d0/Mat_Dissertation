@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Arp" ID="{F9F00068-5121-45B2-911E-58C2EDB64348}" WorkUnitID="{F991F406-127E-46D3-9FDA-E6E120BA6410}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music" ID="{F991F406-127E-46D3-9FDA-E6E120BA6410}" WorkUnitID="{F991F406-127E-46D3-9FDA-E6E120BA6410}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_InteractiveMusic" ID="{C5587018-5003-4991-8B49-3D11C619D0DB}" WorkUnitID="{AC894FCB-3516-4640-B374-6729C79F4995}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music Playlist Container" ID="{323C00AD-A759-4A75-AE1E-4702439B0737}" WorkUnitID="{F991F406-127E-46D3-9FDA-E6E120BA6410}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="InteractiveMusic" ID="{F27E62A6-ED86-4AF0-992C-97643CBFF23B}" WorkUnitID="{F991F406-127E-46D3-9FDA-E6E120BA6410}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Chords" ID="{116715D0-E089-4D3B-88B3-46BE200072A0}" WorkUnitID="{F991F406-127E-46D3-9FDA-E6E120BA6410}" Origin="Manual" Filter="7"/>

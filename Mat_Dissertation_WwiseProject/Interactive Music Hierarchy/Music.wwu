@@ -23,6 +23,7 @@
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{F36FDF51-842C-4E0D-AA5C-20A0AC3E8321}" ShortID="623596372">
 											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
@@ -71,6 +72,9 @@
 										<Property Name="MusicTrackType" Type="int16" Value="3"/>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="Null" ID="{EF699DBA-0A80-4612-BA12-F8AEB4852312}" WorkUnitID="{D51066C3-E682-4D5A-8C20-C59E5FC22CA9}"/>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94B37397-43C8-44EE-BB58-5BB8A42CBB36}"/>
 										</Reference>
@@ -215,6 +219,17 @@
 														<ReferenceList>
 															<Reference Name="TrackSequenceSwitch">
 																<ObjectRef Name="Slow" ID="{FE57EFCA-FFB6-4093-AC3B-85780162E856}" WorkUnitID="{D51066C3-E682-4D5A-8C20-C59E5FC22CA9}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{A673EC6E-587A-47E6-8C95-C7A722DF506A}">
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="Null" ID="{EF699DBA-0A80-4612-BA12-F8AEB4852312}" WorkUnitID="{D51066C3-E682-4D5A-8C20-C59E5FC22CA9}"/>
 															</Reference>
 														</ReferenceList>
 													</MusicTrackSequence>
@@ -534,6 +549,17 @@
 														<ReferenceList>
 															<Reference Name="TrackSequenceSwitch">
 																<ObjectRef Name="Slow" ID="{FE57EFCA-FFB6-4093-AC3B-85780162E856}" WorkUnitID="{D51066C3-E682-4D5A-8C20-C59E5FC22CA9}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{E6E90A70-F77E-457E-9C07-88F024CD879A}">
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="Null" ID="{EF699DBA-0A80-4612-BA12-F8AEB4852312}" WorkUnitID="{D51066C3-E682-4D5A-8C20-C59E5FC22CA9}"/>
 															</Reference>
 														</ReferenceList>
 													</MusicTrackSequence>
