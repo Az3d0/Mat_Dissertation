@@ -8,7 +8,6 @@ public class TestBeat : MonoBehaviour
     int m_count;
     [SerializeField] private int m_bpm = 100;
     private float m_adjustedTimestep;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         m_stopwatch = new Stopwatch();
