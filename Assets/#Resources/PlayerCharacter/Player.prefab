@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::P_Interaction
   m_camera: {fileID: 8345525062643955143}
-  m_rayLength: 3
+  m_rayLength: 10
 --- !u!114 &1684448845573585336
 MonoBehaviour:
   m_ObjectHideFlags: 0
