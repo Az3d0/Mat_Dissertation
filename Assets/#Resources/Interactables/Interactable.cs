@@ -14,19 +14,25 @@ public class Interactable : MonoBehaviour
 
 
     [SerializeField] private UnityEvent m_onTargetedEvents;
+    [SerializeField] private UnityEvent m_onTargetCancelledEvents;
+
     [SerializeField] private UnityEvent m_onHitEvents;
 
     [Header("Intearction Type")]
     [SerializeField] bool m_proximityBased;
     private bool m_inTriggerZone;
 
-    public virtual void OnTargeted()
+    public void OnTargeted()
     {
         m_onTargetedEvents?.Invoke();
 
     }
 
-    public virtual void OnHit()
+    public void OnTargetCancelled()
+    {
+        m_onTargetCancelledEvents?.Invoke();
+    }
+    public void OnHit()
     {
         m_onHitEvents?.Invoke();
     }
