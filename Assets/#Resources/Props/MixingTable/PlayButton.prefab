@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6412301700928030463}
   - component: {fileID: 6959611075963431250}
+  - component: {fileID: 309019601613771842}
   - component: {fileID: 6568488783770100144}
   - component: {fileID: 1962696702908742873}
   - component: {fileID: 5069416272094321383}
@@ -56,8 +57,34 @@ MonoBehaviour:
       m_Calls: []
   m_onHitEvents:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 309019601613771842}
+        m_TargetAssemblyTypeName: Lever, Assembly-CSharp
+        m_MethodName: ToggleState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_proximityBased: 0
+--- !u!114 &309019601613771842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3378638743362205870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cdebf9a9755b9459aea8970ef3d4d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Lever
+  m_onMaterial: {fileID: 2100000, guid: dfb7b59045e8e2247ba770363763cb46, type: 2}
+  m_offMaterial: {fileID: 2100000, guid: 374868686c0cba749acd6bcea8207500, type: 2}
 --- !u!33 &6568488783770100144
 MeshFilter:
   m_ObjectHideFlags: 0

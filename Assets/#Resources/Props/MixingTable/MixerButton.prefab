@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 269026487834040021}
   - component: {fileID: 4930094497599174933}
   - component: {fileID: 6531700292100384002}
+  - component: {fileID: 192988117927473403}
   - component: {fileID: 6904042952116431074}
   - component: {fileID: 7099596487042962312}
   - component: {fileID: 8670471864343290552}
@@ -159,13 +160,13 @@ MonoBehaviour:
   m_onHitEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MixingTable, Assembly-CSharp
-        m_MethodName: TrySwitch
-        m_Mode: 2
+      - m_Target: {fileID: 192988117927473403}
+        m_TargetAssemblyTypeName: Lever, Assembly-CSharp
+        m_MethodName: ToggleState
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 6531700292100384002}
-          m_ObjectArgumentAssemblyTypeName: TrackSwitcher, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -190,6 +191,20 @@ MonoBehaviour:
     groupIdInternal: 0
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+--- !u!114 &192988117927473403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6824859331827617016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cdebf9a9755b9459aea8970ef3d4d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Lever
+  m_onMaterial: {fileID: 2100000, guid: dfb7b59045e8e2247ba770363763cb46, type: 2}
+  m_offMaterial: {fileID: 2100000, guid: 374868686c0cba749acd6bcea8207500, type: 2}
 --- !u!33 &6904042952116431074
 MeshFilter:
   m_ObjectHideFlags: 0
