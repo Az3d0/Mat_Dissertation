@@ -44,6 +44,13 @@
     ],
     "SwitchGroups": [
      {
+      "Id": "1763041431",
+      "Name": "MusicSpeed",
+      "ObjectPath": "\\Switches\\Default Work Unit\\MusicSpeed",
+      "GUID": "{923939A3-65F7-4536-B681-E07BABC7BD1F}",
+      "Switches": []
+     },
+     {
       "Id": "2660841726",
       "Name": "MelodySpeed",
       "ObjectPath": "\\Switches\\Music\\MelodySpeed",
@@ -72,6 +79,6 @@
     ]
    }
   ],
-  "FileHash": "{5E2447AF-F10F-D6D8-5D82-D3D27A19F582}"
+  "FileHash": "{AD7FA7E8-D6A1-DDD9-8801-DBEC1AA01265}"
  }
 }

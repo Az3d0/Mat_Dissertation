@@ -3,34 +3,12 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{AC894FCB-3516-4640-B374-6729C79F4995}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_diss_loop_1_fast" ID="{11A43B1D-71AD-4C25-8B51-C30A2203F72D}">
+				<Event Name="Play_InteractiveMusic" ID="{C5587018-5003-4991-8B49-3D11C619D0DB}">
 					<ChildrenList>
-						<Action Name="" ID="{5031B78F-049D-4E7D-A901-4175C38F7CCA}" ShortID="86777497">
+						<Action Name="" ID="{35EC2C25-C440-4AB8-8253-389073145091}" ShortID="170422640">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="diss loop 1 fast" ID="{5255D323-47E4-4316-BF9C-0F56E859AE4C}" WorkUnitID="{9566518B-16E7-4E8A-858E-03D8F2B0D1CC}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_diss_loop_1_slow" ID="{7AE58AB8-A960-4DA8-BF8D-2B5D76B77C58}">
-					<ChildrenList>
-						<Action Name="" ID="{F625C94B-DE9C-49B0-BC1D-ACEF8317030F}" ShortID="450453911">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="diss loop 1 slow" ID="{3E34EB3A-558A-4634-A632-6AD3BD2126FF}" WorkUnitID="{9566518B-16E7-4E8A-858E-03D8F2B0D1CC}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_diss_loop_1_tup" ID="{28B7ADFD-7ACA-498F-87A1-7343C2FC743E}">
-					<ChildrenList>
-						<Action Name="" ID="{861264DC-3DA3-4817-9314-851C67C0BB3F}" ShortID="824229714">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="diss loop 1 tup" ID="{BCE5CB33-1F34-407A-AAC7-005BB435FF95}" WorkUnitID="{9566518B-16E7-4E8A-858E-03D8F2B0D1CC}"/>
+									<ObjectRef Name="InteractiveMusic" ID="{F27E62A6-ED86-4AF0-992C-97643CBFF23B}" WorkUnitID="{F991F406-127E-46D3-9FDA-E6E120BA6410}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

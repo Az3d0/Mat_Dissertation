@@ -275,8 +275,6 @@ GameObject:
   - component: {fileID: 257538566}
   - component: {fileID: 257538565}
   - component: {fileID: 257538564}
-  - component: {fileID: 257538570}
-  - component: {fileID: 257538569}
   m_Layer: 0
   m_Name: Interactable
   m_TagString: Untagged
@@ -398,63 +396,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &257538569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257538563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63064aa01fa5dfa43abc3a29f29755af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkEvent
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 972372bde4008304bbfcdcc64bad7cb4, type: 2}
-  useCallbacks: 1
-  stopSoundOnDestroy: 1
-  Callbacks:
-  - Flags:
-      value: 0
-    FunctionName: OnTargeted
-    GameObject: {fileID: 257538563}
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
---- !u!114 &257538570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257538563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fea6e7f05e4bd943974437c2f3673e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkGameObj
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 1
-  isStaticObject: 0
-  usePositionOffsetData: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  scalingFactor: 1
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &260977241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,6 +1428,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 383766664852322522, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_switch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 321ff89acb71ebc42965e62284161bf5, type: 2}
     - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1499,6 +1444,14 @@ PrefabInstance:
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 2156295113172126240}
+    - target: {fileID: 1294149896736975564, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_switch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 81a66f4beac07744a98e8f29100f5a70, type: 2}
+    - target: {fileID: 1684596539912396518, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_track.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: ca00249d6adc4bb4cb37d2cffdb3882b, type: 2}
     - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1619,6 +1572,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7786302401433935642, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_switch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: cc8f92ca1362f7947ab2c24d5c1fb60c, type: 2}
     - target: {fileID: 7987742965818231305, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.size
       value: 0

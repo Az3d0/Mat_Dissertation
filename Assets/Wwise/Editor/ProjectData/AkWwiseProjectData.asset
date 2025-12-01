@@ -66,11 +66,11 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 74548f0213c1264b8e52d2482c0df769
     GuidInternal: 
-    m_lastTime: -8584372655216019449
+    m_lastTime: -8584370102257460572
     List:
-    - name: BackgroundMusic
-      guid: 6ef1a996823e1141b29d332afd4df90c
-      id: 626769978
+    - name: Music
+      guid: 1c47881724de3f4b980a1c7e2052574f
+      id: 3991942870
       PathAndIcons:
       - ElementName: SoundBanks
         ObjectType: 5
@@ -78,10 +78,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 74548f0213c1264b8e52d2482c0df769
-      - ElementName: BackgroundMusic
+      - ElementName: Music
         ObjectType: 7
-        guid: 6ef1a996823e1141b29d332afd4df90c
-      Path: SoundBanks\Default Work Unit\BackgroundMusic
+        guid: 1c47881724de3f4b980a1c7e2052574f
+      Path: SoundBanks\Default Work Unit\Music
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -94,11 +94,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: cb4f89ac16354046b3746729c79f4995
     GuidInternal: 
-    m_lastTime: -8584372655221382610
+    m_lastTime: -8584370097979377918
     List:
-    - name: Play_diss_loop_1_fast
-      guid: 1d3ba411ad71254c8b51c30a2203f72d
-      id: 3356447979
+    - name: Play_InteractiveMusic
+      guid: 187058c5035091498b493d11c619d0db
+      id: 2346973959
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -106,44 +106,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cb4f89ac16354046b3746729c79f4995
-      - ElementName: Play_diss_loop_1_fast
+      - ElementName: Play_InteractiveMusic
         ObjectType: 3
-        guid: 1d3ba411ad71254c8b51c30a2203f72d
-      Path: Events\Default Work Unit\Play_diss_loop_1_fast
-      maxAttenuation: 0
-      maxDuration: 40.85109
-      minDuration: 40.85109
-    - name: Play_diss_loop_1_slow
-      guid: b88ae57a60a9a84dbf8d2b5d76b77c58
-      id: 4054934458
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: cb4f89ac16354046b3746729c79f4995
-      - ElementName: Play_diss_loop_1_slow
-        ObjectType: 3
-        guid: b88ae57a60a9a84dbf8d2b5d76b77c58
-      Path: Events\Default Work Unit\Play_diss_loop_1_slow
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_diss_loop_1_tup
-      guid: fdadb728ca7a8f4987a17343c2fc743e
-      id: 2949879716
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: cb4f89ac16354046b3746729c79f4995
-      - ElementName: Play_diss_loop_1_tup
-        ObjectType: 3
-        guid: fdadb728ca7a8f4987a17343c2fc743e
-      Path: Events\Default Work Unit\Play_diss_loop_1_tup
+        guid: 187058c5035091498b493d11c619d0db
+      Path: Events\Default Work Unit\Play_InteractiveMusic
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -200,7 +166,7 @@ MonoBehaviour:
     ParentPath: Switches\Music
     guid: c36610d582e65a4d8c20c59e5fc22ca9
     GuidInternal: 
-    m_lastTime: -8584372656125288695
+    m_lastTime: -8584370105971628660
     List:
     - name: MelodySpeed
       guid: 15ea6fb498d7dd4a9de69dadd5031315
@@ -283,7 +249,7 @@ MonoBehaviour:
     m_lastTime: -8584372655711926419
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 100000001300000014000000
+  ExpandedWaapiItemIds: 06000000070000000e00000010000000110000001200000013000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

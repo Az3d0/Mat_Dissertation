@@ -8,9 +8,9 @@
    {
     "Id": "3991942870",
     "Type": "User",
-    "GUID": "{80D05862-EA48-41B3-8455-067BD3AD39DD}",
+    "GUID": "{1788471C-DE24-4B3F-980A-1C7E2052574F}",
     "Language": "SFX",
-    "Hash": "{2A05E7E7-2A45-7B71-2609-2A30E4896293}",
+    "Hash": "{D4D0660F-B9CF-FF75-754F-0CDD06576783}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -34,17 +34,19 @@
      {
       "Id": "343454963",
       "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
+      "Streaming": "true",
+      "Location": "Loose",
       "ShortName": "InteractiveMusic\\MelodyFast.wav",
+      "Path": "Media/343454963.wem",
       "CachePath": "18/{18916B42-BDAF-2E3F-B0A1-DE46B2FDBDB2}.wem"
      },
      {
       "Id": "567122657",
       "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
+      "Streaming": "true",
+      "Location": "Loose",
       "ShortName": "InteractiveMusic\\MelodySlow.wav",
+      "Path": "Media/567122657.wem",
       "CachePath": "E3/{E30F3DFA-BAE6-D55F-D752-007498BCA9FA}.wem"
      },
      {
@@ -66,9 +68,10 @@
      {
       "Id": "709859594",
       "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
+      "Streaming": "true",
+      "Location": "Loose",
       "ShortName": "MelodyTup.wav",
+      "Path": "Media/709859594.wem",
       "CachePath": "0B/{0BD168B3-E5AD-1B58-A021-5F72F87DDB19}.wem"
      },
      {
@@ -118,6 +121,6 @@
     ]
    }
   ],
-  "FileHash": "{84BDDD2E-21BC-5C8B-0AE9-38B771010785}"
+  "FileHash": "{189675F3-615E-95D3-BE11-91D3D8F72B53}"
  }
 }
