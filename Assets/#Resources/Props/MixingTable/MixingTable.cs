@@ -6,8 +6,8 @@ using UnityEngine;
 public class MixingTable : MonoBehaviour
 {
 
-    AK.Wwise.Switch m_switch;
     [SerializeField] AK.Wwise.Event m_track;
+    [SerializeField] AK.Wwise.Switch m_nullSwitch;
 
     private TrackSwitcher[] m_switchers;
     private List<GameObject> m_switcherObjects;
@@ -23,9 +23,9 @@ public class MixingTable : MonoBehaviour
             Debug.Log(switcher.gameObject);
         }
     }
-    public void ToggleMusic(Lever state)
+    public void ToggleMusic(Lever startLever)
     {
-        m_trackPlaying = state.State;
+        m_trackPlaying = startLever.State;
         if (!m_trackPlaying)
         {
             m_track.Post(gameObject);
@@ -35,6 +35,9 @@ public class MixingTable : MonoBehaviour
         {
             m_track.Stop(gameObject);
             m_trackPlaying = false;
+
+            ResetOtherLevers(startLever.gameObject);
+            m_nullSwitch.SetValue(gameObject);
         }
     }
     public void TrySwitch(TrackSwitcher switcher)
@@ -60,5 +63,11 @@ public class MixingTable : MonoBehaviour
             }
         }
     }
+
+    public void ToggleRecord(Lever lever)
+    {
+
+    }
+
 }
 
