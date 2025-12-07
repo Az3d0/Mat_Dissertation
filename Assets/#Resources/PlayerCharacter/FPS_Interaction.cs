@@ -10,8 +10,8 @@ public class FPS_Interaction : MonoBehaviour
 {
 
     private Ray m_ray;
-    private GameObject m_hitInteractableGO;
-    private Interactable m_hitInteractable;
+    private GameObject m_targetedInteractableGO;
+    private Interactable m_targetedInteractable;
     private InputHandler m_inputHandler;
 
     [SerializeField] private CinemachineCamera m_camera;
@@ -28,9 +28,9 @@ public class FPS_Interaction : MonoBehaviour
 
     private void OnInteract(InputAction.CallbackContext context)
     {
-        if(m_hitInteractableGO != null)
+        if(m_targetedInteractableGO != null)
         {
-            m_hitInteractable.OnHit();
+            m_targetedInteractable.OnHit();
         }
     }
 
@@ -45,28 +45,44 @@ public class FPS_Interaction : MonoBehaviour
         
         if (Physics.Raycast(m_ray, out RaycastHit hitInfo, m_rayLength))
         {
-            EnableDebugMode(m_ray);
+            if(hitInfo.collider.gameObject != m_targetedInteractableGO)
+            {                
+                //invoke OnTargetCancelled on the previously targeted object before it gets overriden
+                if (m_targetedInteractable != null) m_targetedInteractable.OnTargetCancelled();
 
-            if (hitInfo.collider.TryGetComponent(out Interactable interactable) && hitInfo.collider.gameObject != m_hitInteractableGO)
-            {
-                m_hitInteractableGO = hitInfo.collider.gameObject;
-                m_hitInteractable = interactable;
-                //invoke script 
-                interactable.OnTargeted();
-                //ObjectDetected.Invoke(hitInfo);
+                if (hitInfo.collider.TryGetComponent(out Interactable interactable))
+                {
+                    //assign currently targeted interactable
+                    m_targetedInteractable = interactable;
+                    m_targetedInteractableGO = hitInfo.collider.gameObject;
+
+                    //invoke script 
+                    interactable.OnTargeted();
+                    //ObjectDetected.Invoke(hitInfo);
+                }
+                else
+                {
+                    //assign null to currently target interactable
+                    m_targetedInteractableGO = null;
+                    m_targetedInteractable = null;
+                }
             }
         }
         else
         {
-            if(m_hitInteractableGO != null)
+            //invoke OnTargetCancelled on the previously targeted object before it gets overriden
+            if (m_targetedInteractable != null)
             {
-                m_hitInteractableGO = null;
-                m_hitInteractable = null;
+                m_targetedInteractable.OnTargetCancelled();
             }
+
+            //assign null to currently target interactable
+            m_targetedInteractableGO = null;
+            m_targetedInteractable = null;
         }
     }
 
-    public virtual void EnableDebugMode(Ray ray)
+    public void EnableDebugMode(Ray ray)
     {
         Debug.DrawLine(ray.origin, ray.origin + ray.direction * m_rayLength, Color.red);
     }
