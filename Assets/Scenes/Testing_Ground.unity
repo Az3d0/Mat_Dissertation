@@ -1022,6 +1022,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1727880514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9176337638576276019, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+  m_PrefabInstance: {fileID: 2156295113172126238}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cdebf9a9755b9459aea8970ef3d4d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Lever
 --- !u!1 &1882823201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,55 +1449,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 146688904}
+      objectReference: {fileID: 2156295113172126244}
     - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2156295113172126244}
+      objectReference: {fileID: 146688904}
     - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySwitch
-      objectReference: {fileID: 0}
-    - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
-      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ToggleState
       objectReference: {fileID: 0}
     - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TrySwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MixingTable, Assembly-CSharp
+      value: Lever, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Lever, Assembly-CSharp
+      value: MixingTable, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 2156295113172126240}
+      objectReference: {fileID: 0}
     - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2156295113172126240}
     - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: TrackSwitcher, Assembly-CSharp
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1097693471456196315, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: TrackSwitcher, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1294149896736975564, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_switch.WwiseObjectReference
@@ -1496,61 +1507,93 @@ PrefabInstance:
       propertyPath: m_track.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: ca00249d6adc4bb4cb37d2cffdb3882b, type: 2}
+    - target: {fileID: 1982917131819040547, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982917131819040547, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982917131819040547, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 146688904}
+    - target: {fileID: 1982917131819040547, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982917131819040547, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ReplayRecording
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982917131819040547, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MixingTable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982917131819040547, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1727880514}
+    - target: {fileID: 1982917131819040547, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Lever, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 146688904}
+      objectReference: {fileID: 2156295113172126245}
     - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2156295113172126245}
+      objectReference: {fileID: 146688904}
     - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySwitch
-      objectReference: {fileID: 0}
-    - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
-      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ToggleState
       objectReference: {fileID: 0}
     - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TrySwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MixingTable, Assembly-CSharp
+      value: Lever, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Lever, Assembly-CSharp
+      value: MixingTable, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 2156295113172126241}
+      objectReference: {fileID: 0}
     - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2156295113172126241}
     - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: TrackSwitcher, Assembly-CSharp
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1989779198840693965, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: TrackSwitcher, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2663363563016563657, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_Name
@@ -1558,24 +1601,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 146688904}
+      objectReference: {fileID: 2156295113172126242}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2156295113172126242}
+      objectReference: {fileID: 146688904}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 146688904}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 146688904}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1585,36 +1644,76 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
-      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleMusic
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
-      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToggleState
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ToggleMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ToggleRecordEnabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: ToggleRecording
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MixingTable, Assembly-CSharp
+      value: Lever, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Lever, Assembly-CSharp
+      value: MixingTable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: MixingTable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: MixingTable, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 2156295113172126242}
+      objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2156295113172126242}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2156295113172126242}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2156295113172126242}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: Lever, Assembly-CSharp
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: Lever, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Lever, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645612770677856064, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Lever, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5594772730917826710, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1714,55 +1813,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8268878140513272589, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8268878140513272589, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8268878140513272589, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 146688904}
+      objectReference: {fileID: 2156295113172126243}
     - target: {fileID: 8268878140513272589, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2156295113172126243}
+      objectReference: {fileID: 146688904}
     - target: {fileID: 8268878140513272589, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8268878140513272589, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TrySwitch
-      objectReference: {fileID: 0}
-    - target: {fileID: 8268878140513272589, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
-      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ToggleState
       objectReference: {fileID: 0}
     - target: {fileID: 8268878140513272589, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
+      propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TrySwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268878140513272589, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MixingTable, Assembly-CSharp
+      value: Lever, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8268878140513272589, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Lever, Assembly-CSharp
+      value: MixingTable, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8268878140513272589, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 2156295113172126239}
+      objectReference: {fileID: 0}
     - target: {fileID: 8268878140513272589, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2156295113172126239}
     - target: {fileID: 8268878140513272589, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: TrackSwitcher, Assembly-CSharp
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8268878140513272589, guid: 927b35b1da9e2524eb78cd3232562631, type: 3}
       propertyPath: m_onHitEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: TrackSwitcher, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

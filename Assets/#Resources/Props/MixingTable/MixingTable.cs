@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class MixingTable : MonoBehaviour
@@ -14,16 +16,22 @@ public class MixingTable : MonoBehaviour
     private TrackSwitcher[] m_switchers;
     private List<GameObject> m_switcherObjects;
     private TrackSwitcher m_activeSwitcher = null;
-    private bool m_trackPlaying = false;
+    private bool m_isPlaying = false;
 
     //recorder fields
-    private Stopwatch m_stopwatch;
+    private Stopwatch m_recordStopwatch;
+    private bool m_isRecording = false;
+    private LinkedList<Timestamp> m_timestamps;
+
+    //replayer
+    private Stopwatch m_replayStopwatch;
+    private bool m_isReplaying = false;
+    private LinkedListNode<Timestamp> m_currentlyReplayedStamp;
+    //beat
     private int m_beatCount;
     [SerializeField] private int m_bpm = 100;
     private float m_adjustedTimestep;
-    private bool m_isRecording = false;
 
-    private List<Timestamp> m_timestamps;
     private void Awake()
     {
         //initate switchers
@@ -37,48 +45,76 @@ public class MixingTable : MonoBehaviour
         }
 
         //initate stopwatch
-        m_stopwatch = new Stopwatch();
+        m_recordStopwatch = new Stopwatch();
         m_beatCount = 0;
-        m_timestamps = new List<Timestamp>();
+        m_timestamps = new LinkedList<Timestamp>();
+
+        m_replayStopwatch = new Stopwatch();
+
     }
 
     void Update()
     {
         BPMCounter();
+
+        if (m_isReplaying)
+        {
+            Timestamp timestamp = m_currentlyReplayedStamp.Value;
+            if (m_replayStopwatch.Elapsed.TotalSeconds >= timestamp.ElapsedTime)
+            {
+                if (timestamp.Var.GetType() == typeof(TrackSwitcher))
+                {
+                    TrackSwitcher switcher = (TrackSwitcher)timestamp.Var;
+                    TrySwitch(switcher);
+                    UnityEngine.Debug.Log($"{timestamp.ElapsedTime} - {switcher.Switch}");
+
+                    m_currentlyReplayedStamp = m_currentlyReplayedStamp.Next;
+                }
+                // this isn't great code
+                else if(timestamp.Var.GetType() == typeof(string))
+                {
+                    UnityEngine.Debug.Log($"{timestamp.ElapsedTime} - {timestamp.Var}");
+                    m_track.Stop(gameObject);
+                    m_isPlaying = false;
+                    m_isReplaying = false;
+                }
+            }
+        }
     }
 
     public void ToggleMusic(Lever startLever)
     {
-        m_trackPlaying = startLever.State;
-        if (!m_trackPlaying)
+        m_isPlaying = startLever.State;
+        UnityEngine.Debug.Log($"ToggleMusic Triggered {m_isPlaying}");
+        if (m_isPlaying)
         {
             m_track.Post(gameObject);
-            m_trackPlaying=true;
+            m_isPlaying=true;
         }
         else
         {
             m_track.Stop(gameObject);
-            m_trackPlaying = false;
+            m_isPlaying = false;
         }
     }
 
-    private event Action<object> OnTrackSwitcher;
     public void TrySwitch(TrackSwitcher switcher)
     {
-        TryMakeTimeStamp(OnTrackSwitcher, switcher);
+        TryMakeTimeStamp(switcher);
 
         ResetOtherLevers(switcher.gameObject);
-        if (!switcher == m_activeSwitcher)
+        if (switcher != m_activeSwitcher)
         {
             switcher.Switch.SetValue(gameObject);
             m_activeSwitcher = switcher;
+            UnityEngine.Debug.Log($"TrySwitch Triggered. Toggling switch: {switcher.Switch.Name}");
         }
         else
         {
             m_nullSwitch.SetValue(gameObject);
             m_activeSwitcher = null;
+            UnityEngine.Debug.Log($"TrySwitch Triggered. Toggling switch: null switch");
         }
-        UnityEngine.Debug.Log($"TrySwitch Triggered. Toggling switch: {switcher.Switch.Name}");
     }
     public void ResetOtherLevers(GameObject switcherObject)
     {
@@ -97,58 +133,88 @@ public class MixingTable : MonoBehaviour
     }
     public void ToggleRecordEnabled(Lever lever)
     {
+        if (m_isReplaying) return;
+        
+        if(!lever.State)
+        {
+            TryMakeTimeStamp("end");
+        }
         m_isRecording = lever.State;
     }
     //THIS IS TEMPORARILY SPLIT INTO 2 FUNCTIONS. CHECK IN WITH MAT
     public void ToggleRecording(Lever lever)
     {
+        UnityEngine.Debug.Log("recording started");
         if (lever.State)
         {
             if (m_isRecording)
             {
                 m_beatCount = 0;
-                m_stopwatch.Start(); 
-                m_timestamps = new List<Timestamp>();
-
+                m_recordStopwatch.Start(); 
+                m_timestamps = new LinkedList<Timestamp>();
             }
         }
         else
         {
-            m_stopwatch.Stop();
+            m_recordStopwatch.Stop();
+            // we can save the list somewhere here
+            m_currentlyReplayedStamp = m_timestamps.First;
+            DebugTimestamps(m_timestamps);
         }
+    }
 
+    private void DebugTimestamps(LinkedList<Timestamp> timestamps)
+    {
+        int count = 0;
+        UnityEngine.Debug.Log($"debuging {timestamps.Count} timestamps recorded:");
+
+        foreach (Timestamp timestamp in timestamps)
+        {
+            UnityEngine.Debug.Log($"Timestamp {count}: time {timestamp.ElapsedTime}, action {timestamp.Var}"); 
+            count++;
+        }
     }
     private void BPMCounter()
     {
-        if (m_isRecording && m_stopwatch.IsRunning)
+        if (m_isRecording && m_recordStopwatch.IsRunning)
         {
             m_adjustedTimestep = (float)m_bpm / 60f;
-            float elapsedTime = (float)m_stopwatch.ElapsedMilliseconds / 1000f * m_adjustedTimestep;
+            float elapsedTime = (float)m_recordStopwatch.ElapsedMilliseconds / 1000f * m_adjustedTimestep;
             if ((int)elapsedTime > m_beatCount)
             {
                 m_beatCount++;
             }
         }
     }
-    private void TryMakeTimeStamp(Action<object> a, object var)
+    private void TryMakeTimeStamp(object var)
     {
         if (m_isRecording)
         {
-            Timestamp timestamp = new Timestamp(1f, a);
-            m_timestamps.Add(timestamp);
+            Timestamp timestamp = new Timestamp((float)m_recordStopwatch.Elapsed.TotalSeconds, var);
+            m_timestamps.AddLast(timestamp);
         }
     }
 
+    public void ReplayRecording(Lever lever)
+    {
+        UnityEngine.Debug.Log("Replaying Recording");
+        ToggleMusic(lever);
+        m_isReplaying = true;
+        m_replayStopwatch.Restart();
+        m_replayStopwatch.Start();
+    }
+
+    
 }
 
 public struct Timestamp
 {
-    public Timestamp(float time, Action<object> a)
+    public Timestamp(float time, object var)
     {
-        m_elapsedTime = time;
-        m_action = a;
+        ElapsedTime = time;
+        Var = var;
     }
-    private float m_elapsedTime;
-    private Action<object> m_action;
+    public float ElapsedTime;
+    public object Var;
 }
 

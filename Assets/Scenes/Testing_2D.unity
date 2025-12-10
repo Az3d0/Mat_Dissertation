@@ -821,7 +821,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418db4e2e9132394e978903ccd0d9fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestBeat
-  m_bpm: 80
 --- !u!82 &1531386291
 AudioSource:
   m_ObjectHideFlags: 0
