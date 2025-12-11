@@ -13,8 +13,6 @@ public class MixingTable : MonoBehaviour
     [SerializeField] AK.Wwise.Event m_track;
     [SerializeField] AK.Wwise.Switch m_nullSwitch;
 
-    private TrackSwitcher[] m_switchers;
-    private List<GameObject> m_switcherObjects;
     private TrackSwitcher m_activeSwitcher = null;
     private bool m_isPlaying = false;
 
@@ -34,15 +32,6 @@ public class MixingTable : MonoBehaviour
 
     private void Awake()
     {
-        //initate switchers
-        m_switcherObjects = new List<GameObject>();
-        m_switchers = transform.GetComponentsInChildren<TrackSwitcher>();
-
-        foreach (TrackSwitcher switcher in m_switchers)
-        {
-            m_switcherObjects.Add(switcher.gameObject);
-            UnityEngine.Debug.Log(switcher.gameObject);
-        }
 
         //initate stopwatch
         m_recordStopwatch = new Stopwatch();
@@ -100,9 +89,9 @@ public class MixingTable : MonoBehaviour
 
     public void TrySwitch(TrackSwitcher switcher)
     {
+        //timestamp currently doesnt record nullswitch as nullswitch. change that? It probably doesn't matter.
         TryMakeTimeStamp(switcher);
 
-        ResetOtherLevers(switcher.gameObject);
         if (switcher != m_activeSwitcher)
         {
             switcher.Switch.SetValue(gameObject);
@@ -116,21 +105,7 @@ public class MixingTable : MonoBehaviour
             UnityEngine.Debug.Log($"TrySwitch Triggered. Toggling switch: null switch");
         }
     }
-    public void ResetOtherLevers(GameObject switcherObject)
-    {
-        foreach(GameObject go in m_switcherObjects)
-        {
-            if (go == switcherObject)
-            {
-                continue;
-            }
 
-            if (go.TryGetComponent<Lever>(out Lever lever))
-            {
-                if (lever.State) lever.ToggleState();
-            }
-        }
-    }
     public void ToggleRecordEnabled(Lever lever)
     {
         if (m_isReplaying) return;
@@ -141,7 +116,7 @@ public class MixingTable : MonoBehaviour
         }
         m_isRecording = lever.State;
     }
-    //THIS IS TEMPORARILY SPLIT INTO 2 FUNCTIONS. CHECK IN WITH MAT
+    //THIS IS TEMPORARILY SPLIT INTO 2 FUNCTIONS. MERGE INTO A SINGLE RECORD AND PLAY BUTTON
     public void ToggleRecording(Lever lever)
     {
         UnityEngine.Debug.Log("recording started");
@@ -150,6 +125,7 @@ public class MixingTable : MonoBehaviour
             if (m_isRecording)
             {
                 m_beatCount = 0;
+                m_recordStopwatch.Reset();
                 m_recordStopwatch.Start(); 
                 m_timestamps = new LinkedList<Timestamp>();
             }
@@ -200,7 +176,7 @@ public class MixingTable : MonoBehaviour
         UnityEngine.Debug.Log("Replaying Recording");
         ToggleMusic(lever);
         m_isReplaying = true;
-        m_replayStopwatch.Restart();
+        m_replayStopwatch.Reset();
         m_replayStopwatch.Start();
     }
 

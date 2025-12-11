@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3818852287659443977}
   - component: {fileID: 7609254405976744247}
   m_Layer: 0
-  m_Name: RecordButton
+  m_Name: ReplayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
