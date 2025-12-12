@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8592513774914075951}
   - component: {fileID: 5716808225881920130}
+  - component: {fileID: 4031386510945963998}
   - component: {fileID: 3137447755027836818}
   - component: {fileID: 8422956244479023712}
   - component: {fileID: 3818852287659443977}
@@ -94,7 +95,64 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 6c8757831f0db244bbff715206ecc0a5, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: ParseGameObjectData
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 81339283837567870}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_proximityBased: 0
+--- !u!114 &4031386510945963998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81339283837567870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7825f4197b66484a99a00c220c2d9f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  EventChannels:
+  - GameEvent: {fileID: 11400000, guid: 05de3c767da5c5249a7ceade156e4dde, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5716808225881920130}
+          m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+          m_MethodName: ToggleInteractionState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - GameEvent: {fileID: 11400000, guid: 1b38875ed3d04ec46a4a2a8467813dc5, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5716808225881920130}
+          m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+          m_MethodName: ToggleInteractionState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &3137447755027836818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cdebf9a9755b9459aea8970ef3d4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Lever
+  InitialState: 0
   m_onMaterial: {fileID: 2100000, guid: dfb7b59045e8e2247ba770363763cb46, type: 2}
   m_offMaterial: {fileID: 2100000, guid: 374868686c0cba749acd6bcea8207500, type: 2}
   m_interactionPrompt: {fileID: 2768693977337142184}

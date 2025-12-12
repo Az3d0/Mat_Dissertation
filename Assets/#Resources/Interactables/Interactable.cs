@@ -21,7 +21,7 @@ public class Interactable : MonoBehaviour
     [Header("Intearction Type")]
     [SerializeField] bool m_proximityBased;
     private bool m_inTriggerZone;
-
+    private bool m_isInteractionEnabled = true;
     public void OnTargeted()
     {
         m_onTargetedEvents?.Invoke();
@@ -34,9 +34,41 @@ public class Interactable : MonoBehaviour
     }
     public void OnHit()
     {
+        if (!m_isInteractionEnabled) return;
         m_onHitEvents?.Invoke();
     }
 
+    public void ToggleInteractionState()
+    {
+        m_isInteractionEnabled = !m_isInteractionEnabled;
+    }
+
+    //I might delete these later
+    public void ToggleInteractionState(object obj)
+    {
+        if (obj.GetType() == typeof(GameObject))
+        {
+            if (((GameObject)obj).TryGetComponent(out Lever lever))
+            {
+                m_isInteractionEnabled = !lever.State;
+                Debug.Log($"m_isInteractionEnabled set to {!lever.State} on {gameObject.name}.");
+            }
+            else
+            {
+                Debug.LogWarning("ToggleInteraction failed: no Lever component attached to GameObject");
+            }
+        }
+        else if (obj.GetType() == typeof(Lever))
+        {
+            Lever lever = (Lever)obj;
+            m_isInteractionEnabled = !lever.State;
+        }
+    }
+    public void ToggleInteractionState(bool state)
+    {
+        m_isInteractionEnabled = state;
+        Debug.Log($"m_isInteractionEnabled set to {state} on {gameObject.name}.");
+    }
     public virtual void OnTriggerEnter(Collider other)
     {
         if (!m_proximityBased) return;

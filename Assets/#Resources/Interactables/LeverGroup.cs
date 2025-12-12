@@ -8,7 +8,6 @@ public class LeverGroup : MonoBehaviour
     /// child objects with a Lever component get automatically added on Awake
     /// </summary>
     [SerializeField] private List<Lever> m_manuallyAssignedLevers;
-    [SerializeField] private bool m_hasDefaultSelection;
     private void Awake()
     {
         m_goLevers = InitialiseLevers();

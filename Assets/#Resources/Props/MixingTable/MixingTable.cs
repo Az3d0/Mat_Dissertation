@@ -32,12 +32,10 @@ public class MixingTable : MonoBehaviour
 
     private void Awake()
     {
-
         //initate stopwatch
         m_recordStopwatch = new Stopwatch();
         m_beatCount = 0;
         m_timestamps = new LinkedList<Timestamp>();
-
         m_replayStopwatch = new Stopwatch();
 
     }
@@ -45,30 +43,7 @@ public class MixingTable : MonoBehaviour
     void Update()
     {
         BPMCounter();
-
-        if (m_isReplaying)
-        {
-            Timestamp timestamp = m_currentlyReplayedStamp.Value;
-            if (m_replayStopwatch.Elapsed.TotalSeconds >= timestamp.ElapsedTime)
-            {
-                if (timestamp.Var.GetType() == typeof(TrackSwitcher))
-                {
-                    TrackSwitcher switcher = (TrackSwitcher)timestamp.Var;
-                    TrySwitch(switcher);
-                    UnityEngine.Debug.Log($"{timestamp.ElapsedTime} - {switcher.Switch}");
-
-                    m_currentlyReplayedStamp = m_currentlyReplayedStamp.Next;
-                }
-                // this isn't great code
-                else if(timestamp.Var.GetType() == typeof(string))
-                {
-                    UnityEngine.Debug.Log($"{timestamp.ElapsedTime} - {timestamp.Var}");
-                    m_track.Stop(gameObject);
-                    m_isPlaying = false;
-                    m_isReplaying = false;
-                }
-            }
-        }
+        ReplayRecording();
     }
 
     public void ToggleMusic(Lever startLever)
@@ -78,12 +53,10 @@ public class MixingTable : MonoBehaviour
         if (m_isPlaying)
         {
             m_track.Post(gameObject);
-            m_isPlaying=true;
         }
         else
         {
             m_track.Stop(gameObject);
-            m_isPlaying = false;
         }
     }
 
@@ -106,37 +79,28 @@ public class MixingTable : MonoBehaviour
         }
     }
 
-    public void ToggleRecordEnabled(Lever lever)
-    {
-        if (m_isReplaying) return;
-        
-        if(!lever.State)
-        {
-            TryMakeTimeStamp("end");
-        }
-        m_isRecording = lever.State;
-    }
-    //THIS IS TEMPORARILY SPLIT INTO 2 FUNCTIONS. MERGE INTO A SINGLE RECORD AND PLAY BUTTON
     public void ToggleRecording(Lever lever)
     {
+        if (m_isReplaying) return;
+
         UnityEngine.Debug.Log("recording started");
         if (lever.State)
         {
-            if (m_isRecording)
-            {
-                m_beatCount = 0;
-                m_recordStopwatch.Reset();
-                m_recordStopwatch.Start(); 
-                m_timestamps = new LinkedList<Timestamp>();
-            }
+            m_beatCount = 0;
+            m_recordStopwatch.Reset();
+            m_recordStopwatch.Start();
+            m_timestamps = new LinkedList<Timestamp>();
         }
         else
         {
+            TryMakeTimeStamp("end");
             m_recordStopwatch.Stop();
             // we can save the list somewhere here
             m_currentlyReplayedStamp = m_timestamps.First;
             DebugTimestamps(m_timestamps);
+
         }
+        m_isRecording = lever.State;
     }
 
     private void DebugTimestamps(LinkedList<Timestamp> timestamps)
@@ -171,7 +135,7 @@ public class MixingTable : MonoBehaviour
         }
     }
 
-    public void ReplayRecording(Lever lever)
+    public void ToggleReplayRecording(Lever lever)
     {
         UnityEngine.Debug.Log("Replaying Recording");
         ToggleMusic(lever);
@@ -180,7 +144,34 @@ public class MixingTable : MonoBehaviour
         m_replayStopwatch.Start();
     }
 
-    
+    //put this into update
+    private void ReplayRecording()
+    {
+        if (m_isReplaying)
+        {
+            Timestamp timestamp = m_currentlyReplayedStamp.Value;
+            if (m_replayStopwatch.Elapsed.TotalSeconds >= timestamp.ElapsedTime)
+            {
+                if (timestamp.Var.GetType() == typeof(TrackSwitcher))
+                {
+                    TrackSwitcher switcher = (TrackSwitcher)timestamp.Var;
+                    TrySwitch(switcher);
+                    UnityEngine.Debug.Log($"{timestamp.ElapsedTime} - {switcher.Switch}");
+
+                    m_currentlyReplayedStamp = m_currentlyReplayedStamp.Next;
+                }
+                // this isn't great code
+                else if (timestamp.Var.GetType() == typeof(string))
+                {
+                    UnityEngine.Debug.Log($"{timestamp.ElapsedTime} - {timestamp.Var}");
+                    m_track.Stop(gameObject);
+                    m_isPlaying = false;
+                    m_isReplaying = false;
+                }
+            }
+        }
+    }
+
 }
 
 public struct Timestamp
